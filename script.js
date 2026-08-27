@@ -1,163 +1,199 @@
-"use strict";
+/**
+ * InvoiceFine – Production Landing Page JavaScript Engine
+ * Vanilla JavaScript (No external frameworks or libraries)
+ */
 
-/* ==========================================================
-   InvoiceFine landing page — Vanilla JS
-   ========================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-// Central Google Play URL — replace "#" with the real store URL.
-const GOOGLE_PLAY_URL = "#";
+  /* --------------------------------------------------
+   * 1. CONFIGURATION & CENTRALIZED GOOGLE PLAY URL
+   * -------------------------------------------------- */
+  // Update this single constant whenever the live Google Play Store URL is ready
+  const GOOGLE_PLAY_URL = "#";
 
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
-
-/* ---------- Mobile navigation ---------- */
-const hamburger = document.getElementById("hamburger");
-const mainNav = document.getElementById("main-nav");
-
-function closeMenu() {
-  hamburger.classList.remove("open");
-  mainNav.classList.remove("open");
-  document.body.classList.remove("menu-open");
-  hamburger.setAttribute("aria-expanded", "false");
-  hamburger.setAttribute("aria-label", "Open menu");
-}
-
-function toggleMenu() {
-  const isOpen = mainNav.classList.toggle("open");
-  hamburger.classList.toggle("open", isOpen);
-  document.body.classList.toggle("menu-open", isOpen);
-  hamburger.setAttribute("aria-expanded", String(isOpen));
-  hamburger.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-}
-
-hamburger.addEventListener("click", toggleMenu);
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && mainNav.classList.contains("open")) {
-    closeMenu();
-    hamburger.focus();
-  }
-});
-
-// Close menu when clicking outside nav (mobile)
-document.addEventListener("click", (e) => {
-  if (
-    mainNav.classList.contains("open") &&
-    !mainNav.contains(e.target) &&
-    !hamburger.contains(e.target)
-  ) {
-    closeMenu();
-  }
-});
-
-/* ---------- Sticky header state ---------- */
-const header = document.getElementById("site-header");
-
-function onScrollHeader() {
-  header.classList.toggle("scrolled", window.scrollY > 8);
-}
-window.addEventListener("scroll", onScrollHeader, { passive: true });
-onScrollHeader();
-
-/* ---------- Smooth scrolling ---------- */
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const id = link.getAttribute("href");
-    if (id === "#") return;
-
-    const target = document.querySelector(id);
-    if (!target) return;
-
-    e.preventDefault();
-    closeMenu();
-
-    target.scrollIntoView({
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-      block: "start",
-    });
-
-    // Move focus for keyboard/screen-reader users
-    target.setAttribute("tabindex", "-1");
-    target.focus({ preventScroll: true });
-  });
-});
-
-/* ---------- FAQ accordion ---------- */
-document.querySelectorAll(".faq-item").forEach((item) => {
-  const btn = item.querySelector(".faq-question");
-  const answer = item.querySelector(".faq-answer");
-
-  btn.addEventListener("click", () => {
-    const isOpen = item.classList.contains("open");
-
-    // Close all items (single-open behaviour)
-    document.querySelectorAll(".faq-item.open").forEach((other) => {
-      other.classList.remove("open");
-      other.querySelector(".faq-question").setAttribute("aria-expanded", "false");
-      other.querySelector(".faq-answer").hidden = true;
-    });
-
-    if (!isOpen) {
-      item.classList.add("open");
-      btn.setAttribute("aria-expanded", "true");
-      answer.hidden = false;
+  // Bind all CTA buttons designated for Google Play Installation
+  const playStoreButtons = document.querySelectorAll('.js-play-store-btn');
+  playStoreButtons.forEach(btn => {
+    btn.setAttribute('href', GOOGLE_PLAY_URL);
+    if (GOOGLE_PLAY_URL !== "#") {
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener noreferrer');
     }
   });
-});
 
-/* ---------- CTA / Download buttons ---------- */
-document.querySelectorAll("[data-download]").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    if (GOOGLE_PLAY_URL === "#") {
-      // Placeholder mode — prevent dead navigation
-      e.preventDefault();
-      console.info("Set GOOGLE_PLAY_URL in script.js to enable download links.");
+  /* --------------------------------------------------
+   * 2. AUTOMATIC CURRENT YEAR UPDATE
+   * -------------------------------------------------- */
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  /* --------------------------------------------------
+   * 3. STICKY HEADER TRANSFORMATION ON SCROLL
+   * -------------------------------------------------- */
+  const siteHeader = document.getElementById('site-header');
+  const handleHeaderScroll = () => {
+    if (!siteHeader) return;
+    if (window.scrollY > 20) {
+      siteHeader.classList.add('scrolled');
     } else {
-      btn.href = GOOGLE_PLAY_URL;
-      btn.target = "_blank";
-      btn.rel = "noopener";
+      siteHeader.classList.remove('scrolled');
     }
-  });
-});
+  };
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
 
-/* ---------- Back to top ---------- */
-const backToTop = document.getElementById("back-to-top");
+  /* --------------------------------------------------
+   * 4. MOBILE NAVIGATION DRAWER & HAMBURGER
+   * -------------------------------------------------- */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-window.addEventListener(
-  "scroll",
-  () => {
-    backToTop.classList.toggle("visible", window.scrollY > 600);
-  },
-  { passive: true }
-);
+  if (mobileToggle && mobileDrawer) {
+    const toggleMenu = (open) => {
+      const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen.toString());
+      mobileDrawer.setAttribute('aria-hidden', (!isOpen).toString());
+      
+      // Prevent body scroll when mobile menu is open
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: prefersReducedMotion ? "auto" : "smooth",
-  });
-});
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
 
-/* ---------- Current year ---------- */
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+    // Close mobile menu on internal navigation link tap
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        toggleMenu(false);
+      });
+    });
 
-/* ---------- Scroll reveal animations ---------- */
-if (!prefersReducedMotion && "IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
+    // Close when clicking outside drawer
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer.classList.contains('open') && !siteHeader.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    // Close on ESC key for keyboard accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+        toggleMenu(false);
+        mobileToggle.focus();
+      }
+    });
+  }
+
+  /* --------------------------------------------------
+   * 5. FAQ ACCORDION COMPONENT
+   * -------------------------------------------------- */
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (!questionBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isCurrentlyActive = item.classList.contains('active');
+
+      // Close all other accordion items for clean presentation
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
         }
       });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-  );
 
-  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-} else {
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
-}
+      // Toggle clicked item
+      item.classList.toggle('active', !isCurrentlyActive);
+      questionBtn.setAttribute('aria-expanded', (!isCurrentlyActive).toString());
+    });
+  });
+
+  /* --------------------------------------------------
+   * 6. SCROLL REVEAL MICRO-INTERACTIONS
+   * -------------------------------------------------- */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll(
+      '.feature-card, .value-card, .step-card, .biz-card, .trust-card, .workflow-card, .pricing-card'
+    );
+
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  /* --------------------------------------------------
+   * 7. BACK TO TOP BUTTON
+   * -------------------------------------------------- */
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  if (backToTopBtn) {
+    const handleScrollBtnVisibility = () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollBtnVisibility, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  /* --------------------------------------------------
+   * 8. SMOOTH SCROLL FOR IN-PAGE ANCHOR LINKS
+   * -------------------------------------------------- */
+  const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+  anchorLinks.forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+        const headerOffset = siteHeader ? siteHeader.offsetHeight + 10 : 70;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
