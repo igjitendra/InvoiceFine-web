@@ -1,1237 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InvoiceFine – GST Billing, Invoices &amp; Business Management</title>
-  <meta name="description" content="InvoiceFine helps small businesses, retailers, freelancers and service providers create GST invoices, estimates, manage customers and products, and run everyday billing from Android.">
-  <link rel="canonical" href="https://invoicefine.com/">
-  
-  <!-- Open Graph / Social Meta -->
+  <title>InvoiceFine — Pocket ERP for Indian Small Business | 100% Offline GST Billing</title>
+  <meta name="description" content="InvoiceFine is a fast, 100% offline-first Android billing app for Indian small businesses. Create GST invoices, 3-inch Bluetooth thermal receipts, customer khata, inventory, and P&L reports with zero server fees.">
+  <meta name="keywords" content="InvoiceFine, GST billing app, offline billing software, Indian small business ERP, thermal bill printing, khata ledger app, inventory tracker, Vyapar alternative">
+  <link rel="canonical" href="https://invoicefine.procsctools.in/">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
+  <link rel="shortcut icon" href="Web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="manifest" href="Web/manifest.json">
+  <meta name="theme-color" content="#D93632">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://invoicefine.com/">
-  <meta property="og:title" content="InvoiceFine – GST Billing, Invoices &amp; Business Management">
-  <meta property="og:description" content="GST billing, invoices, estimates and business tools made simple for Android.">
-  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:url" content="https://invoicefine.procsctools.in/">
+  <meta property="og:title" content="InvoiceFine — Pocket ERP for Indian Small Business">
+  <meta property="og:description" content="100% offline-first Android billing app with Bluetooth thermal printing, customer khata, stock management, and GST reports.">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
 
-  <!-- Twitter Meta -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="InvoiceFine – GST Billing, Invoices &amp; Business Management">
-  <meta name="twitter:description" content="Create GST invoices, manage customers &amp; products with InvoiceFine for Android.">
-  <meta name="twitter:image" content="assets/og-image.png">
+  <meta name="twitter:url" content="https://invoicefine.procsctools.in/">
+  <meta name="twitter:title" content="InvoiceFine — Pocket ERP for Indian Small Business">
+  <meta name="twitter:description" content="100% offline-first Android billing app with Bluetooth thermal printing, customer khata, stock management, and GST reports.">
+  <meta name="twitter:image" content="https://invoicefine.procsctools.in/cover.png">
 
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- JSON-LD Structured Data -->
+  <!-- Schema.org Software Application Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "InvoiceFine",
-    "applicationCategory": "BusinessApplication",
     "operatingSystem": "Android",
-    "description": "GST billing, invoices, estimates, customer and product management for small businesses and freelancers.",
+    "applicationCategory": "BusinessApplication",
     "offers": {
       "@type": "Offer",
+      "price": "0",
       "priceCurrency": "INR"
+    },
+    "description": "Pocket ERP for Indian Small Business. 100% offline-first GST billing, thermal printing, customer khata, and stock inventory.",
+    "url": "https://invoicefine.procsctools.in",
+    "image": "https://invoicefine.procsctools.in/cover.png",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.procsctools.invoicefine",
+    "author": {
+      "@type": "Organization",
+      "name": "procsctools"
     }
   }
   </script>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Top Sticky Navigation Header -->
-  <header class="site-header" id="site-header">
-    <div class="header-container">
-      <a href="#hero" class="brand-logo" aria-label="InvoiceFine Home">
-        <div class="logo-icon-wrap" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect width="28" height="28" rx="7" fill="#D93632"/>
-            <path d="M7 8.5H21M7 14H17M7 19.5H13" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
-            <circle cx="19.5" cy="18.5" r="2.5" fill="#FFFFFF"/>
-          </svg>
-        </div>
-        <span class="brand-name">InvoiceFine</span>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <span>InvoiceFine</span>
+        <span class="brand-badge">Pocket ERP</span>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <ul class="nav-list">
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="invoice-maker.html" class="nav-link">Free Invoice Tool</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="app-tour.html" class="nav-link">App Tour</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="guide.html" class="nav-link">Guides</a></li>
+        <li><a href="contact.html" class="nav-link">Support</a></li>
+      </ul>
 
-      <!-- Desktop CTA Button -->
-      <div class="header-cta-wrap">
-        <a href="#" class="btn btn-primary js-play-store-btn" role="button">Download App</a>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon"></span>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+          <span>Get App</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Toggle Button -->
-      <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Toggle Navigation Menu">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
-    </div>
-
-    <!-- Mobile Drawer Menu -->
-    <div class="mobile-nav-drawer" id="mobile-drawer" aria-hidden="true">
-      <nav class="mobile-nav-inner">
-        <ul class="mobile-nav-list">
-          <li><a href="#features" class="mobile-nav-link">Features</a></li>
-          <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
-          <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
-          <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
-        </ul>
-        <div class="mobile-cta-box">
-          <a href="#" class="btn btn-primary btn-full js-play-store-btn">Download InvoiceFine</a>
-        </div>
-      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-grid">
-        <!-- Hero Text Column -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-grid">
         <div class="hero-content">
-          <div class="eyebrow-badge">
-            <span class="eyebrow-dot"></span>
-            Simple billing for growing businesses
+          <div class="badge badge-primary" style="margin-bottom: 20px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            100% Offline-First • Zero Monthly Server Fees
           </div>
-          <h1 class="hero-heading">
-            Professional Invoicing.<br>
-            <span class="text-primary">Made Simple.</span>
+          <h1 class="display-title">
+            Pocket ERP for <span class="gradient-text">Indian Small Business</span>
           </h1>
-          <p class="hero-description">
-            Create GST invoices, estimates, manage customers and products, and run your business from one simple Android app.
-          </p>
-          <div class="hero-action-group">
-            <a href="#" class="btn btn-primary btn-lg js-play-store-btn">Download InvoiceFine</a>
-            <a href="#features" class="btn btn-secondary btn-lg">Explore Features</a>
-          </div>
-          <p class="hero-trust-line">
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" class="trust-icon" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Built for retailers, freelancers, service providers and small businesses.
-          </p>
-        </div>
-
-        <!-- Hero Phone Visual -->
-        <div class="hero-visual">
-          <div class="phone-mockup-wrapper">
-            <div class="phone-frame">
-              <div class="phone-camera-island"></div>
-              <div class="phone-screen">
-                <!-- App Screen Header -->
-                <div class="app-ui-header">
-                  <div class="app-ui-user">
-                    <div class="app-avatar">IF</div>
-                    <div>
-                      <div class="app-biz-name">Raj Enterprises</div>
-                      <div class="app-biz-gst">GSTIN: 27AABCU9603R1ZM</div>
-                    </div>
-                  </div>
-                  <span class="app-badge-status">Active</span>
-                </div>
-
-                <!-- App Stats Card -->
-                <div class="app-ui-card app-stat-card">
-                  <div class="app-stat-label">Total Invoiced (This Month)</div>
-                  <div class="app-stat-val">₹1,84,320.00</div>
-                  <div class="app-stat-row">
-                    <span class="app-stat-pill">18 Invoices</span>
-                    <span class="app-stat-pill green">₹28,500 Tax Coll.</span>
-                  </div>
-                </div>
-
-                <!-- App Actions Grid -->
-                <div class="app-action-chips">
-                  <div class="app-chip active">+ New Invoice</div>
-                  <div class="app-chip">+ Estimate</div>
-                  <div class="app-chip">+ Customer</div>
-                </div>
-
-                <!-- App Recent List -->
-                <div class="app-ui-card app-recent-box">
-                  <div class="app-section-title">Recent Invoices</div>
-                  
-                  <div class="app-list-item">
-                    <div class="item-icon-box">INV</div>
-                    <div class="item-details">
-                      <div class="item-title">Shree Sai Electronics</div>
-                      <div class="item-sub">INV-2026-084 • Today</div>
-                    </div>
-                    <div class="item-amount">₹24,800</div>
-                  </div>
-
-                  <div class="app-list-item">
-                    <div class="item-icon-box">INV</div>
-                    <div class="item-details">
-                      <div class="item-title">Apex Solutions Pvt Ltd</div>
-                      <div class="item-sub">INV-2026-083 • Yesterday</div>
-                    </div>
-                    <div class="item-amount">₹62,450</div>
-                  </div>
-
-                  <div class="app-list-item">
-                    <div class="item-icon-box">INV</div>
-                    <div class="item-details">
-                      <div class="item-title">Kiran Verma</div>
-                      <div class="item-sub">INV-2026-082 • 25 Aug</div>
-                    </div>
-                    <div class="item-amount">₹4,200</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Optional Real Dashboard Image Overlay -->
-            <img src="assets/app-dashboard.png" alt="InvoiceFine App Dashboard on Android" class="actual-screenshot-img" loading="eager" onerror="this.remove()">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Value Proposition Cards -->
-    <section class="value-prop-section">
-      <div class="container">
-        <div class="value-grid">
-          <!-- Card 1 -->
-          <div class="value-card">
-            <div class="value-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
-            <h3 class="value-title">Create Invoices</h3>
-            <p class="value-desc">Professional GST invoices in seconds with accurate line items and tax calculations.</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="value-card">
-            <div class="value-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3 class="value-title">Manage Your Business</h3>
-            <p class="value-desc">Customers, products, services and estimates cataloged neatly in one place.</p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="value-card">
-            <div class="value-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="1" y1="1" x2="23" y2="23"></line>
-                <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
-                <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
-                <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
-                <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
-                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                <line x1="12" y1="20" x2="12.01" y2="20"></line>
-              </svg>
-            </div>
-            <h3 class="value-title">Work Offline</h3>
-            <p class="value-desc">Your business data stays fully accessible and operational right on your device.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Problem / Solution Section -->
-    <section class="problem-solution-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Stop juggling billing, customers and business records.</h2>
-          <p class="section-subtitle">
-            InvoiceFine brings essential business tools together so you can spend less time managing paperwork and more time serving customers.
-          </p>
-        </div>
-
-        <div class="comparison-grid">
-          <!-- Problem Box -->
-          <div class="comparison-box problem-box">
-            <div class="comparison-header">
-              <span class="comparison-tag problem-tag">The Challenge</span>
-              <h3 class="comparison-title">Traditional Manual Billing</h3>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <span class="icon-cross" aria-hidden="true">✕</span>
-                <span>Manual billing takes too long and introduces calculation errors.</span>
-              </li>
-              <li>
-                <span class="icon-cross" aria-hidden="true">✕</span>
-                <span>Customer records and payment history get scattered across notes.</span>
-              </li>
-              <li>
-                <span class="icon-cross" aria-hidden="true">✕</span>
-                <span>Product prices, HSN codes, and SKUs are difficult to track on the go.</span>
-              </li>
-              <li>
-                <span class="icon-cross" aria-hidden="true">✕</span>
-                <span>Formatting professional GST-compliant PDF documents is time-consuming.</span>
-              </li>
-              <li>
-                <span class="icon-cross" aria-hidden="true">✕</span>
-                <span>Business data is disorganized without clear periodic sales clarity.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Solution Box -->
-          <div class="comparison-box solution-box">
-            <div class="comparison-header">
-              <span class="comparison-tag solution-tag">The Solution</span>
-              <h3 class="comparison-title">InvoiceFine Workflow</h3>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <span class="icon-check" aria-hidden="true">✓</span>
-                <span>Fast invoice creation with automatic GST and total calculations.</span>
-              </li>
-              <li>
-                <span class="icon-check" aria-hidden="true">✓</span>
-                <span>Centralized customer management with clear transaction history.</span>
-              </li>
-              <li>
-                <span class="icon-check" aria-hidden="true">✓</span>
-                <span>Organized product and service catalog with SKU and HSN code support.</span>
-              </li>
-              <li>
-                <span class="icon-check" aria-hidden="true">✓</span>
-                <span>Clean, professional invoice templates ready to export as PDF.</span>
-              </li>
-              <li>
-                <span class="icon-check" aria-hidden="true">✓</span>
-                <span>Estimates, business documents, and built-in sales reports and analytics.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Features Grid -->
-    <section class="features-section" id="features">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Comprehensive Toolkit</div>
-          <h2 class="section-title">Everything you need for everyday billing.</h2>
-          <p class="section-subtitle">
-            Engineered specifically for Android to give Indian businesses complete control over sales, invoicing, and inventory records.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <!-- 1. GST Invoices -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h3 class="feature-card-title">GST Invoices</h3>
-            <p class="feature-card-desc">Create professional GST invoices with the information your business needs.</p>
-          </div>
-
-          <!-- 2. Estimates -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-            </div>
-            <h3 class="feature-card-title">Estimates</h3>
-            <p class="feature-card-desc">Create estimates before turning them into business documents.</p>
-          </div>
-
-          <!-- 3. Customer Management -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <h3 class="feature-card-title">Customer Management</h3>
-            <p class="feature-card-desc">Keep customer names, contact details and business information organized.</p>
-          </div>
-
-          <!-- 4. Product Management -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            </div>
-            <h3 class="feature-card-title">Product Management</h3>
-            <p class="feature-card-desc">Manage products, pricing, SKU and HSN-related information.</p>
-          </div>
-
-          <!-- 5. Service Management -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3 class="feature-card-title">Service Management</h3>
-            <p class="feature-card-desc">Manage your services alongside products with custom pricing and tax rates.</p>
-          </div>
-
-          <!-- 6. Professional Templates -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            </div>
-            <h3 class="feature-card-title">Professional Templates</h3>
-            <p class="feature-card-desc">Choose from multiple professional invoice designs tailored for your brand.</p>
-          </div>
-
-          <!-- 7. Barcode & QR Scanning -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-            </div>
-            <h3 class="feature-card-title">Barcode &amp; QR Scanning</h3>
-            <p class="feature-card-desc">Use your camera to scan supported product barcodes and QR codes.</p>
-          </div>
-
-          <!-- 8. Reports & Analytics -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <h3 class="feature-card-title">Reports &amp; Analytics</h3>
-            <p class="feature-card-desc">Understand sales, expenses and business performance in clear summaries.</p>
-          </div>
-
-          <!-- 9. Offline Business -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/></svg>
-            </div>
-            <h3 class="feature-card-title">Offline Business</h3>
-            <p class="feature-card-desc">Continue working without depending on a constant internet connection.</p>
-          </div>
-
-          <!-- 10. PDF & Sharing -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            </div>
-            <h3 class="feature-card-title">PDF &amp; Sharing</h3>
-            <p class="feature-card-desc">Generate professional business documents and share them easily via apps.</p>
-          </div>
-
-          <!-- 11. Backup & Restore -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            </div>
-            <h3 class="feature-card-title">Backup &amp; Restore</h3>
-            <p class="feature-card-desc">Protect and restore your business records using the supported backup and restore functionality.</p>
-          </div>
-
-          <!-- 12. Privacy Focused -->
-          <div class="feature-card">
-            <div class="feature-icon-wrapper">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3 class="feature-card-title">Privacy Focused</h3>
-            <p class="feature-card-desc">Business and invoice records are designed to remain on your device rather than relying on cloud storage.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Deep Feature Showcases (Alternating) -->
-    <section class="showcase-section">
-      <div class="container showcase-container">
-
-        <!-- Showcase 1: Invoice Generation -->
-        <div class="showcase-row">
-          <div class="showcase-content">
-            <div class="section-eyebrow">Instant Invoicing</div>
-            <h2 class="showcase-title">Create professional invoices in seconds</h2>
-            <p class="showcase-desc">
-              Generate structured, tax-ready documents with all required commercial attributes. Ready to export to PDF or share with customers instantly.
-            </p>
-            <ul class="showcase-list">
-              <li><span class="icon-check">✓</span> Complete business details &amp; branding</li>
-              <li><span class="icon-check">✓</span> Structured customer details &amp; GSTIN</li>
-              <li><span class="icon-check">✓</span> Itemized line items with custom quantities</li>
-              <li><span class="icon-check">✓</span> Automatic GST &amp; discount calculation</li>
-              <li><span class="icon-check">✓</span> Clear totals &amp; payment status tags</li>
-              <li><span class="icon-check">✓</span> Clean, standardized PDF document export</li>
-            </ul>
-          </div>
-          <div class="showcase-visual">
-            <div class="ui-mock-card invoice-mock">
-              <div class="mock-header">
-                <div>
-                  <div class="mock-badge">TAX INVOICE</div>
-                  <div class="mock-bold">INV-2026-0042</div>
-                </div>
-                <div class="mock-right-text">
-                  <div>Date: 27 Aug 2026</div>
-                  <div>Due: On Receipt</div>
-                </div>
-              </div>
-              <div class="mock-divider"></div>
-              <div class="mock-parties">
-                <div>
-                  <div class="mock-label">Billed By:</div>
-                  <div class="mock-val">Metro Tech Retail</div>
-                  <div class="mock-sub">GSTIN: 27AAAAA0000A1Z5</div>
-                </div>
-                <div>
-                  <div class="mock-label">Billed To:</div>
-                  <div class="mock-val">Aditya Sharma</div>
-                  <div class="mock-sub">Pune, Maharashtra</div>
-                </div>
-              </div>
-              <table class="mock-table">
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>HSN</th>
-                    <th>Qty</th>
-                    <th>Rate</th>
-                    <th class="text-right">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Wireless Barcode Scanner</td>
-                    <td>8471</td>
-                    <td>1</td>
-                    <td>₹3,200</td>
-                    <td class="text-right">₹3,200</td>
-                  </tr>
-                  <tr>
-                    <td>Thermal Paper Rolls (Pack 10)</td>
-                    <td>4811</td>
-                    <td>2</td>
-                    <td>₹450</td>
-                    <td class="text-right">₹900</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="mock-summary">
-                <div>Subtotal: <strong>₹4,100.00</strong></div>
-                <div>CGST + SGST (18%): <strong>₹738.00</strong></div>
-                <div class="mock-total-row">Grand Total: <span>₹4,838.00</span></div>
-              </div>
-            </div>
-            <!-- Optional Screenshot Replacement -->
-            <img src="assets/invoice-screen.png" alt="Invoice creation in InvoiceFine" class="actual-screenshot-img" loading="lazy" onerror="this.remove()">
-          </div>
-        </div>
-
-        <!-- Showcase 2: Customer Management -->
-        <div class="showcase-row reverse">
-          <div class="showcase-content">
-            <div class="section-eyebrow">Customer Directory</div>
-            <h2 class="showcase-title">Manage customers without the paperwork</h2>
-            <p class="showcase-desc">
-              Organize your customer directory in one central mobile interface. Maintain contact details, GST registration numbers, and previous billing history.
-            </p>
-            <ul class="showcase-list">
-              <li><span class="icon-check">✓</span> Customer names &amp; business titles</li>
-              <li><span class="icon-check">✓</span> Contact details (Phone, Email, Address)</li>
-              <li><span class="icon-check">✓</span> State &amp; GSTIN business credentials</li>
-              <li><span class="icon-check">✓</span> Filterable invoice and estimate records</li>
-            </ul>
-          </div>
-          <div class="showcase-visual">
-            <div class="ui-mock-card customer-mock">
-              <div class="mock-title-row">
-                <span class="mock-bold">Customer Directory</span>
-                <span class="app-chip">+ Add</span>
-              </div>
-              <div class="customer-card-item">
-                <div class="customer-avatar-badge">AP</div>
-                <div class="customer-meta">
-                  <div class="mock-bold">Anand Plastics Ltd.</div>
-                  <div class="mock-sub">+91 98220 12345 • Mumbai</div>
-                  <div class="mock-tag-gst">GSTIN: 27AAACA1234F1Z8</div>
-                </div>
-                <div class="customer-stat-val">3 Invoices</div>
-              </div>
-              <div class="customer-card-item">
-                <div class="customer-avatar-badge">SK</div>
-                <div class="customer-meta">
-                  <div class="mock-bold">Sai Kripa Traders</div>
-                  <div class="mock-sub">+91 94230 67890 • Nagpur</div>
-                  <div class="mock-tag-gst">Unregistered</div>
-                </div>
-                <div class="customer-stat-val">7 Invoices</div>
-              </div>
-            </div>
-            <img src="assets/customers-screen.png" alt="Customer Directory in InvoiceFine" class="actual-screenshot-img" loading="lazy" onerror="this.remove()">
-          </div>
-        </div>
-
-        <!-- Showcase 3: Product & Services -->
-        <div class="showcase-row">
-          <div class="showcase-content">
-            <div class="section-eyebrow">Catalog &amp; Inventory</div>
-            <h2 class="showcase-title">Keep products and services organized</h2>
-            <p class="showcase-desc">
-              Define your items once and reuse them rapidly during invoice creation. Keep prices, HSN/SAC codes, and tax rates structured.
-            </p>
-            <ul class="showcase-list">
-              <li><span class="icon-check">✓</span> Product name &amp; SKU identification</li>
-              <li><span class="icon-check">✓</span> Unit prices &amp; default discount structures</li>
-              <li><span class="icon-check">✓</span> HSN codes for products &amp; SAC codes for services</li>
-              <li><span class="icon-check">✓</span> Configurable GST tax brackets</li>
-              <li><span class="icon-check">✓</span> Dedicated service catalog management</li>
-            </ul>
-          </div>
-          <div class="showcase-visual">
-            <div class="ui-mock-card product-mock">
-              <div class="mock-title-row">
-                <span class="mock-bold">Product &amp; Service Items</span>
-                <span class="app-chip">+ New Item</span>
-              </div>
-              <div class="product-item-row">
-                <div class="prod-left">
-                  <div class="mock-bold">Thermal Printer 80mm</div>
-                  <div class="mock-sub">SKU: PRN-80 • HSN: 8443</div>
-                </div>
-                <div class="prod-right">
-                  <div class="mock-bold">₹4,500.00</div>
-                  <div class="prod-tax-tag">GST 18%</div>
-                </div>
-              </div>
-              <div class="product-item-row">
-                <div class="prod-left">
-                  <div class="mock-bold">Hardware Consultation</div>
-                  <div class="mock-sub">Service • SAC: 998313</div>
-                </div>
-                <div class="prod-right">
-                  <div class="mock-bold">₹1,500/hr</div>
-                  <div class="prod-tax-tag">GST 18%</div>
-                </div>
-              </div>
-            </div>
-            <img src="assets/products-screen.png" alt="Product and Service Catalog" class="actual-screenshot-img" loading="lazy" onerror="this.remove()">
-          </div>
-        </div>
-
-        <!-- Showcase 4: Templates Grid -->
-        <div class="template-showcase-box">
-          <div class="section-header text-center">
-            <div class="section-eyebrow">Flexible Layouts</div>
-            <h2 class="section-title">Professional invoice templates</h2>
-            <p class="section-subtitle">
-              Choose the right presentation style for your industry. Tailored layout options for clear commercial communication.
-            </p>
-          </div>
-
-          <div class="templates-grid">
-            <!-- Template 1: Modern -->
-            <div class="template-card">
-              <div class="template-preview modern-style">
-                <div class="tpl-accent"></div>
-                <div class="tpl-line short"></div>
-                <div class="tpl-line full"></div>
-                <div class="tpl-grid">
-                  <div class="tpl-box"></div>
-                  <div class="tpl-box"></div>
-                </div>
-                <div class="tpl-total"></div>
-              </div>
-              <div class="template-name">Modern</div>
-            </div>
-
-            <!-- Template 2: Classic -->
-            <div class="template-card">
-              <div class="template-preview classic-style">
-                <div class="tpl-header-classic"></div>
-                <div class="tpl-line full"></div>
-                <div class="tpl-line full"></div>
-                <div class="tpl-line full"></div>
-                <div class="tpl-total"></div>
-              </div>
-              <div class="template-name">Classic</div>
-            </div>
-
-            <!-- Template 3: Professional -->
-            <div class="template-card">
-              <div class="template-preview professional-style">
-                <div class="tpl-accent-bar"></div>
-                <div class="tpl-line half"></div>
-                <div class="tpl-table-mock">
-                  <div></div><div></div><div></div>
-                </div>
-                <div class="tpl-total"></div>
-              </div>
-              <div class="template-name">Professional</div>
-            </div>
-
-            <!-- Template 4: Compact -->
-            <div class="template-card">
-              <div class="template-preview compact-style">
-                <div class="tpl-line short"></div>
-                <div class="tpl-line full dense"></div>
-                <div class="tpl-line full dense"></div>
-                <div class="tpl-total dense"></div>
-              </div>
-              <div class="template-name">Compact</div>
-            </div>
-
-            <!-- Template 5: Premium -->
-            <div class="template-card">
-              <div class="template-preview premium-style">
-                <div class="tpl-accent-gold"></div>
-                <div class="tpl-line short"></div>
-                <div class="tpl-grid">
-                  <div class="tpl-box"></div>
-                  <div class="tpl-box"></div>
-                </div>
-                <div class="tpl-total"></div>
-              </div>
-              <div class="template-name">Premium</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Business Types Section -->
-    <section class="business-types-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Versatile Application</div>
-          <h2 class="section-title">Built for businesses of all sizes.</h2>
-          <p class="section-subtitle">
-            Whether you sell products, provide services or manage a growing business, InvoiceFine keeps everyday billing organized.
-          </p>
-        </div>
-
-        <div class="business-types-grid">
-          <div class="biz-card">
-            <div class="biz-icon">🛍️</div>
-            <h3 class="biz-title">Retailers</h3>
-            <p class="biz-text">Quick line item entry and barcode scanning support for retail shops.</p>
-          </div>
-
-          <div class="biz-card">
-            <div class="biz-icon">💻</div>
-            <h3 class="biz-title">Freelancers</h3>
-            <p class="biz-text">Generate clear hourly or project-based invoices and estimates.</p>
-          </div>
-
-          <div class="biz-card">
-            <div class="biz-icon">🔧</div>
-            <h3 class="biz-title">Service Providers</h3>
-            <p class="biz-text">Catalog repair, maintenance, and consultation rates with SAC codes.</p>
-          </div>
-
-          <div class="biz-card">
-            <div class="biz-icon">📦</div>
-            <h3 class="biz-title">Small Businesses</h3>
-            <p class="biz-text">Consolidated billing and sales analytics in a mobile-friendly format.</p>
-          </div>
-
-          <div class="biz-card">
-            <div class="biz-icon">🏢</div>
-            <h3 class="biz-title">Agencies</h3>
-            <p class="biz-text">Send professional, branded business estimates and convert them into bills.</p>
-          </div>
-
-          <div class="biz-card">
-            <div class="biz-icon">🏪</div>
-            <h3 class="biz-title">Local Shops</h3>
-            <p class="biz-text">Dependable offline billing without worrying about network dropouts.</p>
-          </div>
-
-          <div class="biz-card biz-card-wide">
-            <div class="biz-icon">📈</div>
-            <h3 class="biz-title">Growing Businesses</h3>
-            <p class="biz-text">Keep your records structured as your customer directory and catalogs expand.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works-section" id="how-it-works">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Quick Onboarding</div>
-          <h2 class="section-title">Start billing in three simple steps.</h2>
-          <p class="section-subtitle">
-            Get up and running in minutes directly on your Android phone.
-          </p>
-        </div>
-
-        <div class="steps-grid">
-          <!-- Step 1 -->
-          <div class="step-card">
-            <div class="step-badge">01</div>
-            <h3 class="step-title">Set Up Your Business</h3>
-            <p class="step-desc">Add your business name, contact info, logo, and GST details to personalize your account.</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="step-card">
-            <div class="step-badge">02</div>
-            <h3 class="step-title">Add Customers &amp; Products</h3>
-            <p class="step-desc">Create your customer, product and service records, or add them on the fly while generating bills.</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step-card">
-            <div class="step-badge">03</div>
-            <h3 class="step-title">Create &amp; Share</h3>
-            <p class="step-desc">Generate professional invoices and share them with customers via PDF directly from Android.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- App Privacy / Offline Section (Dark Theme) -->
-    <section class="privacy-dark-section">
-      <div class="container">
-        <div class="privacy-dark-grid">
-          <div class="privacy-dark-content">
-            <div class="privacy-badge">Device-First Architecture</div>
-            <h2 class="privacy-heading">Your business data stays with your business.</h2>
-            <p class="privacy-text">
-              InvoiceFine is designed with an offline-first approach. Your customer and invoice records are designed to stay on your device rather than requiring cloud storage.
-            </p>
-            <div class="privacy-points-grid">
-              <div class="privacy-point">
-                <span class="privacy-check">✓</span>
-                <div>
-                  <strong>No unnecessary cloud dependency</strong>
-                  <p>Operate your billing routine without requiring uninterrupted internet connections.</p>
-                </div>
-              </div>
-              <div class="privacy-point">
-                <span class="privacy-check">✓</span>
-                <div>
-                  <strong>Offline-first business workflow</strong>
-                  <p>Invoices, estimates, and catalogs are saved locally for instant access anytime.</p>
-                </div>
-              </div>
-              <div class="privacy-point">
-                <span class="privacy-check">✓</span>
-                <div>
-                  <strong>No unnecessary permissions</strong>
-                  <p>Only essential Android device permissions needed for PDF exports and camera scanning.</p>
-                </div>
-              </div>
-              <div class="privacy-point">
-                <span class="privacy-check">✓</span>
-                <div>
-                  <strong>Business data stays on your device</strong>
-                  <p>Maintain your records locally with device-based backup and restore support.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="privacy-dark-visual">
-            <div class="device-shield-card">
-              <div class="shield-icon-circle">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D93632" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  <polyline points="9 12 11 14 15 10"/>
-                </svg>
-              </div>
-              <div class="shield-title">Local Data Storage</div>
-              <div class="shield-desc">Records reside locally on your Android device.</div>
-              <div class="shield-status-box">
-                <div class="shield-status-line">
-                  <span>Offline Storage Mode</span>
-                  <span class="status-active">Enabled</span>
-                </div>
-                <div class="shield-status-line">
-                  <span>Data Backup Capability</span>
-                  <span class="status-active">Supported</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Clear &amp; Transparent</div>
-          <h2 class="section-title">Simple pricing. No complicated plans.</h2>
-          <p class="section-subtitle">
-            One single plan unlocks the full potential of your invoicing and business management workflow.
-          </p>
-        </div>
-
-        <div class="pricing-card-wrapper">
-          <div class="pricing-card">
-            <div class="pricing-badge">Full Pro Access</div>
-            <h3 class="plan-name">InvoiceFine Pro</h3>
-            <div class="plan-duration">Annual Plan</div>
-
-            <div class="pricing-offer-box">
-              <div class="offer-highlight">₹1 introductory offer may be available</div>
-              <div class="offer-subtext">Then the regular annual subscription price shown by Google Play.</div>
-            </div>
-
-            <p class="pricing-disclaimer">
-              Pricing and introductory-offer eligibility are determined by Google Play and may vary by account and region.
-            </p>
-
-            <ul class="pricing-features-list">
-              <li><span class="icon-check">✓</span> Unlimited billing documents</li>
-              <li><span class="icon-check">✓</span> Premium invoice templates</li>
-              <li><span class="icon-check">✓</span> No InvoiceFine watermark</li>
-              <li><span class="icon-check">✓</span> Advanced reports &amp; analytics</li>
-              <li><span class="icon-check">✓</span> Full business management workflow</li>
-              <li><span class="icon-check">✓</span> Backup &amp; restore functionality</li>
-              <li><span class="icon-check">✓</span> Offline-first workflow</li>
-            </ul>
-
-            <div class="pricing-cta-box">
-              <a href="#" class="btn btn-primary btn-full btn-lg js-play-store-btn">Get InvoiceFine Pro</a>
-              <span class="platform-note">Available on Android via Google Play</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Use-Case Workflows (Real Workflows, No Fake Testimonials) -->
-    <section class="workflows-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Practical Utility</div>
-          <h2 class="section-title">Built for real-world business workflows.</h2>
-          <p class="section-subtitle">
-            See how everyday operators rely on InvoiceFine to keep commercial records streamlined.
-          </p>
-        </div>
-
-        <div class="workflows-grid">
-          <!-- Workflow 1 -->
-          <div class="workflow-card">
-            <div class="workflow-badge">Scenario 01</div>
-            <h3 class="workflow-title">Retail Billing</h3>
-            <p class="workflow-text">
-              Store owners quickly scan product barcodes, add items to the cart, automatically compute GST, and print or share receipts on the spot without lag.
-            </p>
-          </div>
-
-          <!-- Workflow 2 -->
-          <div class="workflow-card">
-            <div class="workflow-badge">Scenario 02</div>
-            <h3 class="workflow-title">Service Invoicing</h3>
-            <p class="workflow-text">
-              Electricians, consultants, and technicians add SAC codes, specify hourly or flat rates, and issue clean PDF bills right from customer locations.
-            </p>
-          </div>
-
-          <!-- Workflow 3 -->
-          <div class="workflow-card">
-            <div class="workflow-badge">Scenario 03</div>
-            <h3 class="workflow-title">Freelance Billing</h3>
-            <p class="workflow-text">
-              Independent creators issue professional quotes and convert approved estimates directly into invoices with proper business information.
-            </p>
-          </div>
-
-          <!-- Workflow 4 -->
-          <div class="workflow-card">
-            <div class="workflow-badge">Scenario 04</div>
-            <h3 class="workflow-title">Small Business Management</h3>
-            <p class="workflow-text">
-              Wholesalers and distributors keep an organized catalog of items, track customer contact details, and review periodic sales reports.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust & Quality Section -->
-    <section class="trust-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">Designed with practical business needs in mind.</h2>
-          <p class="section-subtitle">
-            Engineered with a focus on simplicity, device reliability, and clean design.
-          </p>
-        </div>
-
-        <div class="trust-grid">
-          <div class="trust-card">
-            <div class="trust-icon-box">📄</div>
-            <h3 class="trust-title">Professional Invoices</h3>
-            <p class="trust-desc">Clean layouts with standard tax breakdown fields.</p>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-icon-box">⚡</div>
-            <h3 class="trust-title">Offline-First Workflow</h3>
-            <p class="trust-desc">Your workflow does not break during connectivity drops.</p>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-icon-box">🔒</div>
-            <h3 class="trust-title">Privacy-Focused Architecture</h3>
-            <p class="trust-desc">Data remains locally on your mobile hardware.</p>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-icon-box">✨</div>
-            <h3 class="trust-title">Simple Interface</h3>
-            <p class="trust-desc">Fast navigation designed for daily commercial tasks.</p>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-icon-box">📱</div>
-            <h3 class="trust-title">Android Optimized</h3>
-            <p class="trust-desc">Lightweight, performant, and responsive across devices.</p>
-          </div>
-
-          <div class="trust-card">
-            <div class="trust-icon-box">💼</div>
-            <h3 class="trust-title">Business-Focused Features</h3>
-            <p class="trust-desc">Everything essential, without unnecessary bloated tools.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Frequently Asked Questions (Accordion) -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-eyebrow">Clear Answers</div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about InvoiceFine features and billing.</p>
-        </div>
-
-        <div class="faq-accordion" id="faq-accordion">
-          <!-- Q1 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>What is InvoiceFine?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>InvoiceFine is an Android business billing and invoicing application designed for small businesses, retailers, freelancers and service providers.</p>
-            </div>
-          </div>
-
-          <!-- Q2 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I create GST invoices?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. InvoiceFine is designed to support GST invoice workflows and business tax information.</p>
-            </div>
-          </div>
-
-          <!-- Q3 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I manage customers and products?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. You can manage customers, products and services from the app.</p>
-            </div>
-          </div>
-
-          <!-- Q4 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Does InvoiceFine work offline?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>InvoiceFine is designed around an offline-first workflow so core business operations can continue without a constant internet connection.</p>
-            </div>
-          </div>
-
-          <!-- Q5 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I create estimates?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Estimates are supported as part of the business document workflow.</p>
-            </div>
-          </div>
-
-          <!-- Q6 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Can I customize invoice templates?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>InvoiceFine provides multiple professional invoice templates including Modern, Classic, Professional, Compact and Premium.</p>
-            </div>
-          </div>
-
-          <!-- Q7 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>How does the Pro subscription work?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>InvoiceFine Pro is an annual subscription. Pricing and introductory-offer eligibility are determined by Google Play.</p>
-            </div>
-          </div>
-
-          <!-- Q8 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>What is the ₹1 introductory offer?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>An introductory offer may be available to eligible new customers. Google Play determines eligibility and the applicable price.</p>
-            </div>
-          </div>
-
-          <!-- Q9 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>What happens after the introductory period?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>The subscription renews at the regular price shown by Google Play unless cancelled according to Google Play subscription terms.</p>
-            </div>
-          </div>
-
-          <!-- Q10 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span>Where is my business data stored?</span>
-              <span class="faq-toggle-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>InvoiceFine is designed with an offline-first approach where business records are primarily maintained on the device.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final Call to Action -->
-    <section class="final-cta-section">
-      <div class="container">
-        <div class="cta-inner-card">
-          <div class="section-eyebrow text-white">Get Started Today</div>
-          <h2 class="cta-heading">Ready to simplify your billing?</h2>
-          <p class="cta-subtitle">
-            Create professional invoices, manage your business records and get back to running your business.
+          <p class="section-subtitle" style="margin-left: 0; text-align: left;">
+            Run your entire shop offline without internet downtime. Create GST bills, print on 3" Bluetooth thermal printers, track Udhar khata, monitor low inventory, and export GSTR reports in seconds.
           </p>
 
-          <div class="cta-btn-group">
-            <a href="#" class="btn btn-primary-light btn-lg js-play-store-btn">Download InvoiceFine</a>
-            <a href="#features" class="btn btn-outline-white btn-lg">View Features</a>
-          </div>
-
-          <!-- Google Play Badge Container -->
-          <div class="play-badge-wrap">
-            <a href="#" class="play-badge-link js-play-store-btn" aria-label="Get it on Google Play">
-              <div class="google-play-pill">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.367-.61-.9-.61-1.503V3.317c0-.603.24-1.136.61-1.503zM15.207 13.414l2.586 2.586-12.7 7.29 10.114-9.876zM15.207 10.586L5.093.71l12.7 7.29-2.586 2.586zm1.414 1.414l3.535 2.03c1.12.644 1.12 1.696 0 2.34l-3.535 2.03-2.122-2.122 2.122-2.278z"/>
-                </svg>
-                <div class="pill-text">
-                  <span class="pill-sub">GET IT ON</span>
-                  <span class="pill-main">Google Play</span>
-                </div>
-              </div>
+          <div class="hero-cta-group">
+            <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+              <span>Download on Google Play</span>
             </a>
-            <img src="assets/google-play-badge.png" alt="Get it on Google Play" class="actual-screenshot-img" loading="lazy" onerror="this.remove()">
+            <a href="invoice-maker.html" class="btn btn-secondary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+              <span>Try Online Bill Generator</span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>No Login / 100% Private</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Local SQLite Database</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>ESC/POS Thermal Printing</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <!-- Brand column -->
-      <div class="footer-brand-col">
-        <a href="#hero" class="brand-logo footer-logo">
-          <div class="logo-icon-wrap" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-              <rect width="28" height="28" rx="7" fill="#D93632"/>
-              <path d="M7 8.5H21M7 14H17M7 19.5H13" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
-              <circle cx="19.5" cy="18.5" r="2.5" fill="#FFFFFF"/>
-            </svg>
+        <!-- Hero Cover / Showcase Card -->
+        <div class="hero-preview-wrapper">
+          <div class="hero-cover-card">
+            <img src="cover.png" alt="InvoiceFine Cover Showcase" class="hero-cover-img lightbox-trigger" title="Click to view full preview">
           </div>
-          <span class="brand-name text-white">InvoiceFine</span>
-        </a>
-        <p class="footer-tagline">Simple billing for growing businesses.</p>
-        <p class="footer-platform-tag">Designed for Android OS</p>
-      </div>
-
-      <!-- Links: Product -->
-      <div class="footer-links-col">
-        <h4 class="footer-col-title">Product</h4>
-        <ul class="footer-nav">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-
-      <!-- Links: Legal -->
-      <div class="footer-links-col">
-        <h4 class="footer-col-title">Legal</h4>
-        <ul class="footer-nav">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="refund.html">Refund Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Links: Support -->
-      <div class="footer-links-col">
-        <h4 class="footer-col-title">Support</h4>
-        <ul class="footer-nav">
-          <li><a href="mailto:support@invoicefine.com">Contact Support</a></li>
-          <li><a href="#faq">Help &amp; FAQ</a></li>
-        </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="container footer-bottom-bar">
-      <p class="copyright-text">
-        &copy; <span id="current-year">2026</span> InvoiceFine. All rights reserved.
-      </p>
+  <!-- AUTO-SLIDING SCREENSHOTS CAROUSEL SECTION (PRO FEATURE) -->
+  <section class="slider-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-primary">Real App Experience</span>
+        <h2 class="section-title" style="margin-top: 12px;">Interactive Screen Gallery</h2>
+        <p class="section-subtitle">
+          Swipe or click any screen to inspect InvoiceFine's lightning-fast Android interface built with strict Material 3 design.
+        </p>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-track-wrapper">
+          <div class="slider-track">
+            
+            <!-- Slide 1 -->
+            <div class="slide-card">
+              <img src="screenshots/01_Welcome.png" alt="Welcome to InvoiceFine" class="slide-img">
+              <div class="slide-caption">🚀 Welcome & Quick Setup</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide-card">
+              <img src="screenshots/02_Feature 1.png" alt="GST & Non-GST Invoicing" class="slide-img">
+              <div class="slide-caption">🧾 Smart Invoicing & GST</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide-card">
+              <img src="screenshots/03_Feature 2.png" alt="Bluetooth Thermal Printing" class="slide-img">
+              <div class="slide-caption">🖨️ 2" & 3" Thermal Printing</div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide-card">
+              <img src="screenshots/04_Feature 3.png" alt="Customer Khata Ledger" class="slide-img">
+              <div class="slide-caption">👥 Customer Udhar Khata</div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide-card">
+              <img src="screenshots/05_Feature 4.png" alt="Stock & Inventory Control" class="slide-img">
+              <div class="slide-caption">📦 Low Stock Alerts & Inventory</div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide-card">
+              <img src="screenshots/06_Feature 5.png" alt="Expenses & Cashflow" class="slide-img">
+              <div class="slide-caption">💰 Expenses & Daily Cashflow</div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide-card">
+              <img src="screenshots/07_Feature 6.png" alt="P&L & GSTR Reports" class="slide-img">
+              <div class="slide-caption">📊 P&L & GSTR Tax Reports</div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide-card">
+              <img src="screenshots/08_Download.png" alt="Download & Get Started" class="slide-img">
+              <div class="slide-caption">⚡ Fast 60-Sec Onboarding</div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide-card">
+              <img src="screenshots/09_Screenshot.png" alt="InvoiceFine Full App" class="slide-img">
+              <div class="slide-caption">📱 Complete Pocket ERP</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrevBtn" aria-label="Previous Slide">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn" id="sliderNextBtn" aria-label="Next Slide">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Banner -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3 class="stat-counter" data-count="100" data-suffix="%">100%</h3>
+          <p>Offline-First & Private</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-counter" data-count="0" data-prefix="₹">₹0</h3>
+          <p>Monthly Cloud Server Fees</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-counter" data-count="1" data-prefix="<" data-suffix=" Sec">&lt;1 Sec</h3>
+          <p>Lightning Fast Bill Generation</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-counter" data-count="299" data-prefix="₹" data-suffix="/yr">₹299/yr</h3>
+          <p>Affordable Pro Subscription</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-primary">Built for Indian Vyaparis</span>
+        <h2 class="section-title" style="margin-top: 12px;">Everything You Need to Run Your Shop</h2>
+        <p class="section-subtitle">
+          Say goodbye to bulky desktop computers and costly recurring server charges. InvoiceFine puts an entire commercial ERP into your pocket.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3>Smart GST & Non-GST Invoicing</h3>
+          <p>Create professional invoices with accurate CGST/SGST/IGST tax breakdowns, discounts, and automatic round-offs in seconds.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> A4 Standard & 4x6" label formats</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant WhatsApp PDF sharing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Estimates & Quotations conversion</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="11" y2="16"></line></svg>
+          </div>
+          <h3>Bluetooth Thermal Printer Billing</h3>
+          <p>Connect any standard 2-inch or 3-inch ESC/POS thermal printer via Bluetooth for lightning fast counter receipts.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 58mm & 80mm roll support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast paper-saving compact format</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom shop header & footer notes</li>
+          </ul>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Customer Ledger & Udhar Khata</h3>
+          <p>Track customer balances, payment histories, and send polite automated payment reminder messages over WhatsApp.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Partial payment & balance tracking</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 1-Click WhatsApp payment reminders</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Detailed account statement PDFs</li>
+          </ul>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3>Stock & Inventory Management</h3>
+          <p>Automatic stock deduction upon billing, low inventory threshold notifications, and HSN/SAC code catalog management.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Low stock warning badges</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Wholesale & Retail dual pricing</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Scaled-integer quantity precision</li>
+          </ul>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3>Expense & Cashflow Tracker</h3>
+          <p>Categorize business expenses (rent, electricity, staff salary, tea) and maintain exact daily net cash flow calculations.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-mode expense logging</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Vendor expense reconciliation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily cash register balance</li>
+          </ul>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3>P&L & GSTR-1 Tax Reports</h3>
+          <p>One-tap business health checks with accurate recognized profit formulas (Sales − COGS − Expenses) and GSTR summaries.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> CA-ready Excel & PDF exports</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Top selling items analytics</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Date-range filtering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="section" style="background: var(--bg-surface-variant);">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-positive">Why InvoiceFine?</span>
+        <h2 class="section-title" style="margin-top: 12px;">How We Compare to Traditional Apps</h2>
+        <p class="section-subtitle">
+          See why Indian retailers choose InvoiceFine over heavy cloud billing applications.
+        </p>
+      </div>
+
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">Feature</th>
+              <th class="highlight" style="width: 35%;">InvoiceFine</th>
+              <th style="width: 30%;">Other Billing Apps (Vyapar / MyBillBook)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Internet Requirement</strong></td>
+              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ 100% Offline-First</span> (Works anywhere)</td>
+              <td>Requires constant internet / cloud sync</td>
+            </tr>
+            <tr>
+              <td><strong>Data Privacy & Security</strong></td>
+              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Stored in phone's SQLite DB</span> (Zero server access)</td>
+              <td>Uploaded to external 3rd-party servers</td>
+            </tr>
+            <tr>
+              <td><strong>Annual Cost</strong></td>
+              <td class="highlight"><span style="color:var(--primary); font-weight:800;">₹299 / Year</span> (Intro offer ₹1)</td>
+              <td>₹2,500 to ₹5,000+ every year</td>
+            </tr>
+            <tr>
+              <td><strong>App Speed & Size</strong></td>
+              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Instant launch</span>, lightweight & ultra-fast</td>
+              <td>Bulky, slow on budget Android devices</td>
+            </tr>
+            <tr>
+              <td><strong>Thermal Bluetooth Printing</strong></td>
+              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Built-in ESC/POS</span> 2" & 3" support</td>
+              <td>Often locked behind costly desktop plans</td>
+            </tr>
+            <tr>
+              <td><strong>Backup Control</strong></td>
+              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Encrypted local & Google Drive</span></td>
+              <td>Locked inside vendor cloud</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Blog Articles Showcase -->
+  <section class="section">
+    <div class="container">
+      <div class="flex justify-between items-center" style="margin-bottom: 36px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="badge badge-warning">Knowledge Hub</span>
+          <h2 style="margin-top: 8px;">Latest from Our Blog</h2>
+        </div>
+        <a href="blog.html" class="btn btn-secondary btn-sm">
+          <span>View All Articles →</span>
+        </a>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-thumb">
+            <img src="screenshots/02_Feature 1.png" alt="Offline Billing Guide" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>📅 August 2026</span> • <span>⏱️ 5 Min Read</span>
+            </div>
+            <h3>Why 100% Offline Billing is Essential for Indian Retailers</h3>
+            <p>Why depending on constant internet causes counter bottlenecks and unnecessary cloud server subscription expenses.</p>
+            <a href="blog-offline-vs-cloud-billing.html" class="blog-link">Read Guide →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-thumb">
+            <img src="screenshots/03_Feature 2.png" alt="Thermal Printer Guide" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>📅 August 2026</span> • <span>⏱️ 6 Min Read</span>
+            </div>
+            <h3>The Complete Guide to 2" & 3" Bluetooth Thermal Printing</h3>
+            <p>How to pair 58mm/80mm ESC/POS thermal printers with Android phones for instant ink-free receipts.</p>
+            <a href="blog-thermal-printer-guide.html" class="blog-link">Read Guide →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-thumb">
+            <img src="screenshots/04_Feature 3.png" alt="Customer Khata Guide" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span>📅 August 2026</span> • <span>⏱️ 4 Min Read</span>
+            </div>
+            <h3>Mastering Customer Udhar Khata & WhatsApp Reminders</h3>
+            <p>Recover customer balances 3x faster with digital ledger tracking and automated WhatsApp payment links.</p>
+            <a href="blog-gst-and-khata-management.html" class="blog-link">Read Guide →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section class="section-sm" id="download">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Download InvoiceFine for Android</h2>
+        <p>Get the official app directly from Google Play. Lightweight, lightning fast, and ready to bill in under 60 seconds.</p>
+        <div class="flex justify-center gap-4" style="flex-wrap: wrap;">
+          <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-lg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+            <span>Google Play Store</span>
+          </a>
+          <a href="invoice-maker.html" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); color: #FFF; border-color: rgba(255,255,255,0.2);">
+            <span>Try Free Web Bill Maker</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <span>InvoiceFine</span>
+          </a>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog & Insights</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog Archive</a></li>
+            <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
+            <li><a href="blog-thermal-printer-guide.html">Thermal Printer Guide</a></li>
+            <li><a href="blog-gst-and-khata-management.html">Customer Khata Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">GST Setup Guide</a></li>
+            <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
+            <li><a href="guide.html#backup">Backup & Restore</a></li>
+            <li><a href="contact.html">Developer Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
+        <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
+      </div>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

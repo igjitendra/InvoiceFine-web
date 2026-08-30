@@ -1,91 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – InvoiceFine</title>
-  <meta name="description" content="Privacy Policy for InvoiceFine Android billing and invoicing application.">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <title>Privacy Policy — InvoiceFine | 100% Offline-First Data Guarantee</title>
+  <meta name="description" content="Privacy Policy for InvoiceFine: How we guarantee 100% offline local storage with zero cloud telemetry or tracking.">
+  <link rel="canonical" href="https://invoicefine.procsctools.in/privacy.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
+  <link rel="shortcut icon" href="Web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://invoicefine.procsctools.in/privacy.html">
+  <meta property="og:title" content="Privacy Policy — InvoiceFine">
+  <meta property="og:description" content="100% offline-first local SQLite data guarantee.">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Site Header -->
-  <header class="site-header" id="site-header">
-    <div class="header-container">
-      <a href="index.html#hero" class="brand-logo" aria-label="InvoiceFine Home">
-        <div class="logo-icon-wrap" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect width="28" height="28" rx="7" fill="#D93632"/>
-            <path d="M7 8.5H21M7 14H17M7 19.5H13" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
-            <circle cx="19.5" cy="18.5" r="2.5" fill="#FFFFFF"/>
-          </svg>
-        </div>
-        <span class="brand-name">InvoiceFine</span>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <span>InvoiceFine</span>
+        <span class="brand-badge">Pocket ERP</span>
       </a>
-      <a href="index.html" class="btn btn-secondary">Back to Home</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="invoice-maker.html" class="nav-link">Free Invoice Tool</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="app-tour.html" class="nav-link">App Tour</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="guide.html" class="nav-link">Guides</a></li>
+        <li><a href="contact.html" class="nav-link">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon"></span>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+          <span>Get App</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="legal-main">
-    <div class="container">
-      <article class="legal-card">
-        <header class="legal-header">
-          <h1 class="legal-title">Privacy Policy</h1>
-          <p class="legal-date">Last Updated: August 2026</p>
-        </header>
+  <!-- Content -->
+  <section class="section" style="padding-top: calc(var(--nav-height) + 40px);">
+    <div class="container" style="max-width: 860px;">
+      <div class="text-center" style="margin-bottom: 40px;">
+        <span class="badge badge-positive">Data Security Promise</span>
+        <h1 class="section-title" style="margin-top: 12px;">Privacy Policy</h1>
+        <p style="color: var(--text-secondary);">Last updated: August 2026</p>
+      </div>
 
-        <div class="legal-content">
-          <p>
-            At <strong>InvoiceFine</strong>, we respect your privacy and are committed to maintaining the confidentiality of your commercial records. This Privacy Policy outlines how our Android mobile application and website handle information.
-          </p>
+      <div class="doc-card">
+        <h2>1. Overview & 100% Offline Architecture</h2>
+        <p>
+          InvoiceFine is engineered strictly as an <strong>offline-first application</strong> for Indian small businesses, shopkeepers, and traders. Your business information—including customer names, phone numbers, invoice records, sales totals, item catalogs, and GST numbers—is stored exclusively inside a local SQLite database on your device.
+        </p>
+        <p>
+          We do not operate remote backend business servers, databases, or analytics engines that collect or synchronize your commercial transactional data.
+        </p>
 
-          <h2>1. Device-First &amp; Offline Architecture</h2>
-          <p>
-            InvoiceFine is developed with an offline-first architecture. Your business profile, customer details, product inventories, and generated invoices or estimates are stored locally on your mobile device.
-          </p>
+        <h2>2. Information We Do NOT Collect</h2>
+        <p>
+          Unlike conventional cloud billing software, InvoiceFine does NOT access, upload, sell, rent, or profile:
+        </p>
+        <ul>
+          <li>Your customer address book or phone contacts.</li>
+          <li>Your invoice items, pricing, profit margins, or daily turnover figures.</li>
+          <li>Your tax filing or GSTIN data.</li>
+          <li>Your shop digital signature or private company receipts.</li>
+        </ul>
 
-          <h2>2. Information Collection &amp; Use</h2>
-          <p>
-            The mobile application does not require you to create a proprietary remote cloud account to perform everyday billing operations.
-          </p>
-          <ul>
-            <li><strong>Commercial Records:</strong> Invoices, prices, tax calculations, and contact directories remain on your device.</li>
-            <li><strong>Camera Access:</strong> Camera permissions are used strictly in real-time when you choose to scan product barcodes or QR codes. Camera data is not recorded or transmitted.</li>
-            <li><strong>Storage &amp; Files:</strong> Storage permissions are requested solely to allow you to save and export PDF invoices, or to execute manual device backups.</li>
-          </ul>
+        <h2>3. Device Permissions & Usage</h2>
+        <p>InvoiceFine requests only essential local hardware permissions:</p>
+        <ul>
+          <li><strong>Bluetooth / Nearby Devices:</strong> Required solely to discover and pair with your ESC/POS thermal receipt printers.</li>
+          <li><strong>Storage / Media:</strong> Required to save exported A4 PDF bills, Excel spreadsheets, and encrypted local backup archives to your device storage.</li>
+          <li><strong>Camera / Photos:</strong> Optional, used only if you choose to attach a business logo to your custom invoices.</li>
+        </ul>
 
-          <h2>3. Subscription &amp; Purchases</h2>
-          <p>
-            InvoiceFine Pro in-app subscriptions are processed securely via <strong>Google Play In-App Billing</strong>. We do not process, store, or receive your credit card or sensitive payment details. Google Play manages payment processing according to Google’s standard privacy terms.
-          </p>
+        <h2>4. Subscriptions & Payments</h2>
+        <p>
+          All Pro subscription purchases are handled directly and securely through <strong>Google Play Billing</strong>. We never see or store your credit card numbers, debit card details, UPI PINs, or bank account credentials.
+        </p>
 
-          <h2>4. Data Backup and Export</h2>
-          <p>
-            You retain full control over your backup files. Backup records created within the application are managed by you on your local hardware or your preferred file destination.
-          </p>
-
-          <h2>5. Third-Party Services</h2>
-          <p>
-            The website and mobile application do not sell your personal or business data to third-party advertising networks.
-          </p>
-
-          <h2>6. Contact Information</h2>
-          <p>
-            If you have questions regarding this Privacy Policy or app data handling, please contact us at:
-            <br><strong>Email:</strong> support@invoicefine.com
-          </p>
-        </div>
-      </article>
+        <h2>5. Contact Us</h2>
+        <p>
+          For questions regarding privacy, offline data handling, or security, please contact us at:
+          <br>
+          <strong>Email:</strong> <a href="mailto:jitendraeditiz@gmail.com" style="color: var(--primary);">jitendraeditiz@gmail.com</a>
+          <br>
+          <strong>Website:</strong> <a href="https://invoicefine.procsctools.in" target="_blank" style="color: var(--primary);">https://invoicefine.procsctools.in</a>
+        </p>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom-bar text-center">
-      <p>&copy; <span id="current-year">2026</span> InvoiceFine. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <span>InvoiceFine</span>
+          </a>
+          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog Archive</a></li>
+            <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
+            <li><a href="blog-thermal-printer-guide.html">Thermal Printer Guide</a></li>
+            <li><a href="blog-gst-and-khata-management.html">Customer Khata Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">GST Setup Guide</a></li>
+            <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
+            <li><a href="guide.html#backup">Backup & Restore</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online GST Invoice Generator & Thermal Bill Tool — InvoiceFine</title>
+  <meta name="description" content="Generate, customize, and print 100% free GST tax invoices and 3-inch thermal receipts online. Powered by InvoiceFine's accurate Indian billing engine.">
+  <link rel="canonical" href="https://invoicefine.procsctools.in/invoice-maker.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
+  <link rel="shortcut icon" href="Web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://invoicefine.procsctools.in/invoice-maker.html">
+  <meta property="og:title" content="Free Online GST Invoice Generator & Thermal Bill Tool — InvoiceFine">
+  <meta property="og:description" content="Create, customize and print GST invoices and 3-inch thermal bills in your browser.">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/invoice-maker.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <span>InvoiceFine</span>
+        <span class="brand-badge">Pocket ERP</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="invoice-maker.html" class="nav-link active">Free Invoice Tool</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="app-tour.html" class="nav-link">App Tour</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="guide.html" class="nav-link">Guides</a></li>
+        <li><a href="contact.html" class="nav-link">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon"></span>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+          <span>Get App</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header Banner -->
+  <section class="section-sm" style="padding-top: calc(var(--nav-height) + 32px); padding-bottom: 24px; background: var(--bg-surface);">
+    <div class="container text-center">
+      <span class="badge badge-positive">Free Web Tool</span>
+      <h1 class="section-title" style="margin-top: 8px;">Instant In-Browser GST Invoice Maker</h1>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+        Create GST bills, calculate CGST/SGST/IGST automatically, switch between A4 and 3" Thermal receipts, and print immediately!
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Invoice Engine Application -->
+  <section class="section" style="padding-top: 32px;">
+    <div class="container">
+      <div class="invoice-app-wrapper">
+        
+        <!-- Left: Invoice Editor -->
+        <div class="invoice-editor-card">
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Your Business Details</span>
+          </div>
+          
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invBusinessName">Business / Shop Name</label>
+              <input type="text" id="invBusinessName" class="form-control" value="Shree Balaji Traders">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invBusinessPhone">Phone Number</label>
+              <input type="text" id="invBusinessPhone" class="form-control" value="+91 98765 43210">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invBusinessGst">GSTIN Number (Optional)</label>
+              <input type="text" id="invBusinessGst" class="form-control" value="07AABCU9603R1ZM">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invBusinessAddress">Shop Address & City</label>
+              <input type="text" id="invBusinessAddress" class="form-control" value="Shop 42, Grain Market, Delhi">
+            </div>
+          </div>
+
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            <span>Customer & Invoice Info</span>
+          </div>
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invCustomerName">Customer / Client Name</label>
+              <input type="text" id="invCustomerName" class="form-control" value="Sharma Kirana & General Store">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invCustomerPhone">Customer Phone</label>
+              <input type="text" id="invCustomerPhone" class="form-control" value="+91 91234 56789">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invNumber">Invoice No.</label>
+              <input type="text" id="invNumber" class="form-control" value="INV-2026-004">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="invDate">Invoice Date</label>
+              <input type="date" id="invDate" class="form-control">
+            </div>
+            <div class="form-group" style="grid-column: span 2; margin-bottom: 0;">
+              <label class="form-label" for="invTaxType">Tax Type</label>
+              <select id="invTaxType" class="form-control">
+                <option value="intra">Intra-State GST (CGST + SGST)</option>
+                <option value="inter">Inter-State GST (IGST)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path></svg>
+            <span>Items & Products</span>
+          </div>
+
+          <div class="item-header" style="display: grid; grid-template-columns: 2.5fr 1fr 1.2fr 1fr 1fr 40px; gap: 10px;">
+            <div>Item Name</div>
+            <div>Qty</div>
+            <div>Price (₹)</div>
+            <div>GST %</div>
+            <div>Disc %</div>
+            <div></div>
+          </div>
+
+          <div id="invItemsTableBody">
+            <!-- Dynamic Items Rows from JS -->
+          </div>
+
+          <div style="margin-top: 16px;">
+            <button type="button" id="addItemBtn" class="btn btn-secondary btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              <span>+ Add Another Item</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Live Print & Paper Preview -->
+        <div class="invoice-preview-card">
+          <div class="invoice-toolbar">
+            <div class="mode-selector">
+              <button class="mode-btn active" id="modeA4Btn">A4 Invoice</button>
+              <button class="mode-btn" id="modeThermalBtn">3" Thermal Slip</button>
+            </div>
+
+            <button type="button" id="printInvoiceBtn" class="btn btn-primary btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / Download PDF</span>
+            </button>
+          </div>
+
+          <div class="paper-preview-container">
+            <div id="invoicePaperPreview" class="invoice-paper">
+              <!-- Live Invoice Paper from JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <span>InvoiceFine</span>
+          </a>
+          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="app-tour.html">App Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog Archive</a></li>
+            <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
+            <li><a href="blog-thermal-printer-guide.html">Thermal Printer Guide</a></li>
+            <li><a href="blog-gst-and-khata-management.html">Customer Khata Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">GST Setup Guide</a></li>
+            <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
+            <li><a href="guide.html#backup">Backup & Restore</a></li>
+            <li><a href="contact.html">Developer Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/invoice-maker.js"></script>
+</body>
+</html>

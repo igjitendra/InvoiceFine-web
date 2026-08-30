@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Manual & Setup Guides — InvoiceFine</title>
+  <meta name="description" content="Step-by-step documentation for setting up GST billing, pairing Bluetooth thermal printers, exporting CA tax reports, and creating encrypted backups in InvoiceFine.">
+  <link rel="canonical" href="https://invoicefine.procsctools.in/guide.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
+  <link rel="shortcut icon" href="Web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://invoicefine.procsctools.in/guide.html">
+  <meta property="og:title" content="User Manual & Setup Guides — InvoiceFine">
+  <meta property="og:description" content="Step-by-step guides for GST billing, Bluetooth thermal printing, and backups.">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <span>InvoiceFine</span>
+        <span class="brand-badge">Pocket ERP</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="invoice-maker.html" class="nav-link">Free Invoice Tool</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="app-tour.html" class="nav-link">App Tour</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="guide.html" class="nav-link active">Guides</a></li>
+        <li><a href="contact.html" class="nav-link">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon"></span>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
+          <span>Get App</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section-sm" style="padding-top: calc(var(--nav-height) + 40px); background: var(--bg-surface);">
+    <div class="container text-center">
+      <span class="badge badge-primary">Documentation & Guides</span>
+      <h1 class="display-title" style="margin-top: 14px;">How to Get Started with InvoiceFine</h1>
+      <p class="section-subtitle">
+        Simple, step-by-step tutorials to help you configure your shop settings, pair thermal hardware, and run your business like a pro.
+      </p>
+    </div>
+  </section>
+
+  <!-- Guides Container -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Guide 1: Setup GST & Business Profile -->
+      <div class="doc-card" id="gst-setup">
+        <h2>1. Setting Up Your Business Profile & GST</h2>
+        <p>
+          Configuring your business name, address, and GSTIN ensures all your generated invoices comply with Indian tax authority guidelines.
+        </p>
+        <ol>
+          <li>Open the InvoiceFine app and navigate to the <strong>More</strong> tab.</li>
+          <li>Tap on <strong>Business Profile & Settings</strong>.</li>
+          <li>Enter your Shop/Company Name, Contact Phone, and Full Address.</li>
+          <li>Toggle <strong>GST Registered Business</strong> to ON and enter your 15-character GSTIN.</li>
+          <li>Select your Default Tax Regime: <em>Regular (CGST + SGST)</em> or <em>Composition Scheme</em>.</li>
+          <li>Tap <strong>Save Profile</strong>. All future bills will automatically include your official header.</li>
+        </ol>
+      </div>
+
+      <!-- Guide 2: Bluetooth Thermal Printer Pairing -->
+      <div class="doc-card" id="thermal">
+        <h2>2. Connecting a Bluetooth Thermal Printer (2" / 3")</h2>
+        <p>
+          InvoiceFine connects directly to standard ESC/POS Bluetooth thermal printers without requiring extra third-party drivers or helper apps.
+        </p>
+        <ol>
+          <li>Turn ON your Bluetooth thermal printer and make sure paper is loaded correctly.</li>
+          <li>On your Android phone, go to <strong>Settings &gt; Bluetooth</strong> and pair with your printer (common default PINs are <code>0000</code> or <code>1234</code>).</li>
+          <li>Open InvoiceFine, create an invoice, and tap <strong>Print / Finalize</strong>.</li>
+          <li>Select <strong>Thermal 3" (80mm)</strong> or <strong>Thermal 2" (58mm)</strong> based on your printer roll size.</li>
+          <li>Select your paired Bluetooth printer from the device picker list. The receipt will print instantly!</li>
+        </ol>
+      </div>
+
+      <!-- Guide 3: Encrypted Backups & Restore -->
+      <div class="doc-card" id="backup">
+        <h2>3. Creating Encrypted Backups & Device Migration</h2>
+        <p>
+          Because InvoiceFine is 100% offline-first, your data lives securely on your device. We recommend taking regular weekly backups to Google Drive or WhatsApp.
+        </p>
+        <ol>
+          <li>Go to <strong>More &gt; Backup & Data Safety</strong>.</li>
+          <li>Tap <strong>Create Full Backup Now</strong>.</li>
+          <li>InvoiceFine packages your entire SQLite database, customer khata, invoices, and catalog into an encrypted <code>.ifine</code> backup archive.</li>
+          <li>Select <strong>Save to Google Drive</strong> or <strong>Send to WhatsApp / Email</strong>.</li>
+          <li><strong>To Restore on a new device:</strong> Install InvoiceFine, go to <em>Backup & Data Safety</em>, tap <em>Restore from Backup</em>, and select your backup file.</li>
+        </ol>
+      </div>
+
+      <!-- Guide 4: Exporting GSTR-1 Tax Reports -->
+      <div class="doc-card" id="tax-export">
+        <h2>4. Exporting GSTR-1 & P&L Reports for Your CA</h2>
+        <p>
+          Prepare your monthly or quarterly GST returns in less than 2 minutes.
+        </p>
+        <ol>
+          <li>Tap the <strong>Reports</strong> tab in the bottom navigation.</li>
+          <li>Select your desired Date Range (e.g. <em>This Month</em>, <em>Previous Quarter</em>, or <em>Custom Range</em>).</li>
+          <li>Review the P&L Breakdown (Gross Sales, Net Tax Collected, COGS, Operating Expenses).</li>
+          <li>Tap <strong>Export GSTR-1 Summary (Excel / PDF)</strong>.</li>
+          <li>Share the generated spreadsheet directly with your Chartered Accountant or Tax Consultant via WhatsApp or Email.</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <span>InvoiceFine</span>
+          </a>
+          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="app-tour.html">App Tour</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog Archive</a></li>
+            <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
+            <li><a href="blog-thermal-printer-guide.html">Thermal Printer Guide</a></li>
+            <li><a href="blog-gst-and-khata-management.html">Customer Khata Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">GST Setup Guide</a></li>
+            <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
+            <li><a href="guide.html#backup">Backup & Restore</a></li>
+            <li><a href="contact.html">Developer Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

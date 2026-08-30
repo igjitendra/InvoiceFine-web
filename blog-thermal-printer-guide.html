@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Complete Guide to 2" & 3" Bluetooth Thermal Printing — InvoiceFine</title>
+  <meta name="description" content="Step-by-step guide to choosing and pairing 58mm (2-inch) and 80mm (3-inch) portable Bluetooth thermal printers with Android phones for fast POS billing.">
+  <link rel="canonical" href="https://invoicefine.procsctools.in/blog-thermal-printer-guide.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
+  <link rel="shortcut icon" href="Web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://invoicefine.procsctools.in/blog-thermal-printer-guide.html">
+  <meta property="og:title" content="The Complete Guide to 2&quot; &amp; 3&quot; Bluetooth Thermal Printing">
+  <meta property="og:description" content="Pair 58mm & 80mm ESC/POS thermal printers with Android for lightning-fast receipts.">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <span>InvoiceFine</span>
+        <span class="brand-badge">Pocket ERP</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="invoice-maker.html" class="nav-link">Free Invoice Tool</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="app-tour.html" class="nav-link">App Tour</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="guide.html" class="nav-link">Guides</a></li>
+        <li><a href="contact.html" class="nav-link">Support</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon"></span>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-sm">
+          <span>Get App</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Header -->
+  <section class="section-sm" style="padding-top: calc(var(--nav-height) + 40px); background: var(--bg-surface);">
+    <div class="container" style="max-width: 860px;">
+      <a href="blog.html" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+        ← Back to Blog
+      </a>
+      <span class="badge badge-positive">Hardware Tutorial</span>
+      <h1 class="display-title" style="margin-top: 14px; font-size: clamp(2rem, 4vw, 3rem);">
+        The Complete Guide to 2" & 3" Bluetooth Thermal Printing
+      </h1>
+      <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 12px;">
+        Published: August 2026 • 6 Min Read • By InvoiceFine Hardware Team
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="section">
+    <div class="container" style="max-width: 860px;">
+      <div class="doc-card">
+        <img src="screenshots/03_Feature 2.png" alt="InvoiceFine Thermal Printing" style="width: 100%; border-radius: var(--radius-md); margin-bottom: 28px; box-shadow: var(--shadow-sm);">
+
+        <h2>Why Switch to Thermal Receipts?</h2>
+        <p>
+          Standard A4 laser and inkjet printers cost ₹15,000+ upfront and require expensive toner replacements, electricity backups, and dedicated desktop computers. In contrast, portable Bluetooth thermal printers:
+        </p>
+        <ul>
+          <li>Cost between ₹1,500 to ₹3,500 on Amazon/Flipkart.</li>
+          <li>Require <strong>zero ink or ribbon</strong> (prints via thermal heat on thermal paper rolls).</li>
+          <li>Run on built-in rechargeable batteries for 12+ hours during power outages.</li>
+          <li>Print a complete receipt in under 2 seconds.</li>
+        </ul>
+
+        <h2>Choosing Between 58mm (2-Inch) and 80mm (3-Inch)</h2>
+        <p>
+          <strong>58mm (2-Inch):</strong> Ideal for small grocery stalls, street vendors, delivery boys, and fast cash memos where counter space is limited.
+        </p>
+        <p>
+          <strong>80mm (3-Inch):</strong> Recommended for retail shops, restaurants, hardware stores, and wholesalers needing itemized GST tax breakdowns (HSN, CGST, SGST) on a wider paper format.
+        </p>
+
+        <h2>How InvoiceFine Communicates via ESC/POS</h2>
+        <p>
+          InvoiceFine implements the industry-standard <strong>ESC/POS</strong> command set natively in JavaScript/C++ platform code. This eliminates the need for messy third-party print service plugins (like RawBT).
+        </p>
+        <ol>
+          <li>Turn ON your Bluetooth printer.</li>
+          <li>Pair in Android Settings (PIN is usually <code>0000</code> or <code>1234</code>).</li>
+          <li>In InvoiceFine, choose <strong>Thermal 3"</strong> or <strong>Thermal 2"</strong>.</li>
+          <li>Tap Print and your bill emerges instantly!</li>
+        </ol>
+
+        <div style="margin-top: 36px;">
+          <a href="invoice-maker.html" class="btn btn-secondary">Test Thermal Bill Layout in Browser</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <span>InvoiceFine</span>
+          </a>
+          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">All Features</a></li>
+            <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog Home</a></li>
+            <li><a href="blog-offline-vs-cloud-billing.html">Offline Billing Guide</a></li>
+            <li><a href="blog-thermal-printer-guide.html">Thermal Printer Guide</a></li>
+            <li><a href="blog-gst-and-khata-management.html">Customer Khata Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul class="footer-links">
+            <li><a href="guide.html">GST Setup Guide</a></li>
+            <li><a href="guide.html#thermal">Thermal Pairing</a></li>
+            <li><a href="guide.html#backup">Backup & Restore</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 InvoiceFine. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
