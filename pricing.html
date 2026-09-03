@@ -7,18 +7,85 @@
   <meta name="description" content="InvoiceFine pricing: Free tier with 5 daily invoices, or unlock unlimited billing, custom branding, and zero watermark with InvoiceFine Pro for just ₹299/year.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/pricing.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/pricing.html">
   <meta property="og:title" content="Pricing Plans — InvoiceFine | ₹299/year with ₹1 Intro Offer">
   <meta property="og:description" content="Affordable offline billing app for Indian shopkeepers.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Schema.org Pricing FAQ & Product Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "InvoiceFine Pro Subscription",
+        "description": "100% offline-first Android billing app for Indian small business. Unlimited GST invoices, thermal printing, customer ledger khata, and GSTR reports.",
+        "brand": {
+          "@type": "Brand",
+          "name": "InvoiceFine"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "299",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://invoicefine.procsctools.in/pricing.html"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the ₹1 First Year intro offer work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To support Indian small business owners, our launch promotion allows you to experience the complete Pro version for just ₹1 for the first entire year. After 1 year, renewal is only ₹299/year unless cancelled."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I pay for InvoiceFine Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All purchases are processed 100% securely through official Google Play billing using UPI (Google Pay, PhonePe, Paytm), Net Banking, or Credit/Debit Cards."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I restore my purchase on a new phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Simply log in with your same Google Play account on your new device and tap Restore Purchases in InvoiceFine settings. Your Pro license will activate automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if my subscription expires?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your data is 100% safe on your phone. You will never lose access to your past invoices, customers, or reports. The app will simply transition to the Free Starter tier."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -26,7 +93,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -74,7 +141,7 @@
       <div class="pricing-grid">
         
         <!-- Free Plan -->
-        <div class="pricing-card">
+        <div class="pricing-card reveal-on-scroll">
           <h3>Free Starter</h3>
           <p style="color: var(--text-secondary); margin-top: 6px; font-size: 0.95rem;">
             Perfect for new shops, small stalls, and occasional billing needs.
@@ -98,7 +165,7 @@
         </div>
 
         <!-- Pro Plan (Featured) -->
-        <div class="pricing-card featured">
+        <div class="pricing-card reveal-on-scroll featured">
           <div class="popular-badge">Most Popular • 90% Off</div>
           
           <div class="flex justify-between items-center">
@@ -225,16 +292,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -244,12 +313,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -269,7 +338,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -280,7 +349,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

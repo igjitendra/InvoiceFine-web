@@ -7,17 +7,23 @@
   <meta name="description" content="Step-by-step documentation for setting up GST billing, pairing Bluetooth thermal printers, exporting CA tax reports, and creating encrypted backups in InvoiceFine.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/guide.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/guide.html">
   <meta property="og:title" content="User Manual & Setup Guides — InvoiceFine">
   <meta property="og:description" content="Step-by-step guides for GST billing, Bluetooth thermal printing, and backups.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -73,7 +79,7 @@
     <div class="container">
       
       <!-- Guide 1: Setup GST & Business Profile -->
-      <div class="doc-card" id="gst-setup">
+      <div class="doc-card reveal-on-scroll" id="gst-setup">
         <h2>1. Setting Up Your Business Profile & GST</h2>
         <p>
           Configuring your business name, address, and GSTIN ensures all your generated invoices comply with Indian tax authority guidelines.
@@ -89,7 +95,7 @@
       </div>
 
       <!-- Guide 2: Bluetooth Thermal Printer Pairing -->
-      <div class="doc-card" id="thermal">
+      <div class="doc-card reveal-on-scroll" id="thermal">
         <h2>2. Connecting a Bluetooth Thermal Printer (2" / 3")</h2>
         <p>
           InvoiceFine connects directly to standard ESC/POS Bluetooth thermal printers without requiring extra third-party drivers or helper apps.
@@ -104,7 +110,7 @@
       </div>
 
       <!-- Guide 3: Encrypted Backups & Restore -->
-      <div class="doc-card" id="backup">
+      <div class="doc-card reveal-on-scroll" id="backup">
         <h2>3. Creating Encrypted Backups & Device Migration</h2>
         <p>
           Because InvoiceFine is 100% offline-first, your data lives securely on your device. We recommend taking regular weekly backups to Google Drive or WhatsApp.
@@ -119,7 +125,7 @@
       </div>
 
       <!-- Guide 4: Exporting GSTR-1 Tax Reports -->
-      <div class="doc-card" id="tax-export">
+      <div class="doc-card reveal-on-scroll" id="tax-export">
         <h2>4. Exporting GSTR-1 & P&L Reports for Your CA</h2>
         <p>
           Prepare your monthly or quarterly GST returns in less than 2 minutes.
@@ -136,16 +142,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -155,12 +163,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -180,7 +188,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -191,7 +199,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

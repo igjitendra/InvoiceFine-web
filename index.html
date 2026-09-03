@@ -9,11 +9,11 @@
   <link rel="canonical" href="https://invoicefine.procsctools.in/">
 
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
-  <link rel="manifest" href="Web/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
   <meta name="theme-color" content="#D93632">
 
   <!-- Open Graph / Facebook -->
@@ -21,14 +21,14 @@
   <meta property="og:url" content="https://invoicefine.procsctools.in/">
   <meta property="og:title" content="InvoiceFine — Pocket ERP for Indian Small Business">
   <meta property="og:description" content="100% offline-first Android billing app with Bluetooth thermal printing, customer khata, stock management, and GST reports.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://invoicefine.procsctools.in/">
   <meta name="twitter:title" content="InvoiceFine — Pocket ERP for Indian Small Business">
   <meta name="twitter:description" content="100% offline-first Android billing app with Bluetooth thermal printing, customer khata, stock management, and GST reports.">
-  <meta name="twitter:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta name="twitter:image" content="https://invoicefine.procsctools.in/cover.webp">
 
   <!-- Schema.org Software Application Structured Data -->
   <script type="application/ld+json">
@@ -45,7 +45,7 @@
     },
     "description": "Pocket ERP for Indian Small Business. 100% offline-first GST billing, thermal printing, customer khata, and stock inventory.",
     "url": "https://invoicefine.procsctools.in",
-    "image": "https://invoicefine.procsctools.in/cover.png",
+    "image": "https://invoicefine.procsctools.in/cover.webp",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.procsctools.invoicefine",
     "author": {
       "@type": "Organization",
@@ -54,6 +54,52 @@
   }
   </script>
 
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does InvoiceFine really work 100% offline without any internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely! InvoiceFine is engineered with a strict 100% offline-first architecture. All your business records, product inventory, customer khata ledger, and sales invoices are stored directly inside your Android device using an encrypted local SQLite database."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Bluetooth thermal printers are compatible with the app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "InvoiceFine natively supports all standard 2-inch (58mm) and 3-inch (80mm) ESC/POS Bluetooth thermal printers commonly used across Indian retail."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I backup and secure my shop data and customer khata?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "InvoiceFine provides 1-tap automated encrypted database backups. You can save your backup file to your phone's internal memory, an SD card, send it to your WhatsApp/email, or save it directly into your personal Google Drive account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any hidden monthly server charges or commissions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zero hidden fees! The core app is free to use, and our Pro subscription is currently available at a special introductory price of just ₹1 for your first year with zero hidden transaction commissions or server fees."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -62,7 +108,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -107,7 +153,7 @@
             Pocket ERP for <span class="gradient-text">Indian Small Business</span>
           </h1>
           <p class="section-subtitle" style="margin-left: 0; text-align: left;">
-            Run your entire shop offline without internet downtime. Create GST bills, print on 3" Bluetooth thermal printers, track Udhar khata, monitor low inventory, and export GSTR reports in seconds.
+            GST billing, thermal printing &amp; Udhar khata — all 100% offline, zero fees.
           </p>
 
           <div class="hero-cta-group">
@@ -139,8 +185,22 @@
 
         <!-- Hero Cover / Showcase Card -->
         <div class="hero-preview-wrapper">
+          <!-- Floating Feature Badges (Pro Visual Effect) -->
+          <div class="floating-hero-badge floating-badge-top-left">
+            <span style="font-size: 1.1rem;">⚡</span>
+            <span>100% Offline SQLite</span>
+          </div>
+          <div class="floating-hero-badge floating-badge-bottom-right">
+            <span style="font-size: 1.1rem;">🖨️</span>
+            <span>3" Bluetooth Print (&lt;1s)</span>
+          </div>
+          <div class="floating-hero-badge floating-badge-bottom-left">
+            <span style="font-size: 1.1rem;">💰</span>
+            <span>₹0 Server Fees Forever</span>
+          </div>
+
           <div class="hero-cover-card">
-            <img src="cover.png" alt="InvoiceFine Cover Showcase" class="hero-cover-img lightbox-trigger" title="Click to view full preview">
+            <img src="cover.webp" alt="InvoiceFine Cover Showcase" class="hero-cover-img lightbox-trigger" title="Click to view full preview" width="560" height="340" fetchpriority="high">
           </div>
         </div>
       </div>
@@ -148,7 +208,7 @@
   </section>
 
   <!-- AUTO-SLIDING SCREENSHOTS CAROUSEL SECTION (PRO FEATURE) -->
-  <section class="slider-section">
+  <section class="slider-section reveal-on-scroll">
     <div class="container">
       <div class="text-center">
         <span class="badge badge-primary">Real App Experience</span>
@@ -164,55 +224,55 @@
             
             <!-- Slide 1 -->
             <div class="slide-card">
-              <img src="screenshots/01_Welcome.png" alt="Welcome to InvoiceFine" class="slide-img">
+              <img src="screenshots/01_welcome.webp" alt="Welcome to InvoiceFine" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">🚀 Welcome & Quick Setup</div>
             </div>
 
             <!-- Slide 2 -->
             <div class="slide-card">
-              <img src="screenshots/02_Feature 1.png" alt="GST & Non-GST Invoicing" class="slide-img">
+              <img src="screenshots/02_feature_1.webp" alt="GST & Non-GST Invoicing" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">🧾 Smart Invoicing & GST</div>
             </div>
 
             <!-- Slide 3 -->
             <div class="slide-card">
-              <img src="screenshots/03_Feature 2.png" alt="Bluetooth Thermal Printing" class="slide-img">
+              <img src="screenshots/03_feature_2.webp" alt="Bluetooth Thermal Printing" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">🖨️ 2" & 3" Thermal Printing</div>
             </div>
 
             <!-- Slide 4 -->
             <div class="slide-card">
-              <img src="screenshots/04_Feature 3.png" alt="Customer Khata Ledger" class="slide-img">
+              <img src="screenshots/04_feature_3.webp" alt="Customer Khata Ledger" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">👥 Customer Udhar Khata</div>
             </div>
 
             <!-- Slide 5 -->
             <div class="slide-card">
-              <img src="screenshots/05_Feature 4.png" alt="Stock & Inventory Control" class="slide-img">
+              <img src="screenshots/05_feature_4.webp" alt="Stock & Inventory Control" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">📦 Low Stock Alerts & Inventory</div>
             </div>
 
             <!-- Slide 6 -->
             <div class="slide-card">
-              <img src="screenshots/06_Feature 5.png" alt="Expenses & Cashflow" class="slide-img">
+              <img src="screenshots/06_feature_5.webp" alt="Expenses & Cashflow" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">💰 Expenses & Daily Cashflow</div>
             </div>
 
             <!-- Slide 7 -->
             <div class="slide-card">
-              <img src="screenshots/07_Feature 6.png" alt="P&L & GSTR Reports" class="slide-img">
+              <img src="screenshots/07_feature_6.webp" alt="P&L & GSTR Reports" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">📊 P&L & GSTR Tax Reports</div>
             </div>
 
             <!-- Slide 8 -->
             <div class="slide-card">
-              <img src="screenshots/08_Download.png" alt="Download & Get Started" class="slide-img">
+              <img src="screenshots/08_download.webp" alt="Download & Get Started" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">⚡ Fast 60-Sec Onboarding</div>
             </div>
 
             <!-- Slide 9 -->
             <div class="slide-card">
-              <img src="screenshots/09_Screenshot.png" alt="InvoiceFine Full App" class="slide-img">
+              <img src="screenshots/09_screenshot.webp" alt="InvoiceFine Full App" class="slide-img" loading="lazy" decoding="async">
               <div class="slide-caption">📱 Complete Pocket ERP</div>
             </div>
 
@@ -233,25 +293,79 @@
     </div>
   </section>
 
+  <!-- HOW IT WORKS IN 3 SIMPLE STEPS (PRO SECTION) -->
+  <section class="section reveal-on-scroll" id="how-it-works" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-primary">Simple &amp; Fast</span>
+        <h2 class="section-title" style="margin-top: 12px;">Start Billing in 3 Easy Steps</h2>
+        <p class="section-subtitle">
+          Ready to bill in 60 seconds. No OTP, no cloud, no setup.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Install &amp; Add Shop Info</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+            Download from Play Store, enter shop name &amp; GSTIN. Your offline database is ready.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; font-weight: 700; color: var(--positive); display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>No OTP / No Cloud Required</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Bill &amp; Print Offline (&lt;1s)</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+            Scan barcodes, pick items, auto-calculate GST &amp; print 3&quot; thermal receipt via Bluetooth.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>58mm &amp; 80mm ESC/POS Printers</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Track Udhar &amp; Grow Profit</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">
+            Monitor stock, send WhatsApp payment reminders &amp; view daily P&amp;L reports.
+          </p>
+          <div style="margin-top: 16px; font-size: 0.8rem; font-weight: 700; color: var(--positive); display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>1-Click WhatsApp Reminders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Statistics Banner -->
   <section class="stats-banner">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
           <h3 class="stat-counter" data-count="100" data-suffix="%">100%</h3>
-          <p>Offline-First & Private</p>
+          <p>Offline & Private</p>
         </div>
         <div class="stat-item">
           <h3 class="stat-counter" data-count="0" data-prefix="₹">₹0</h3>
-          <p>Monthly Cloud Server Fees</p>
+          <p>Monthly Server Fees</p>
         </div>
         <div class="stat-item">
           <h3 class="stat-counter" data-count="1" data-prefix="<" data-suffix=" Sec">&lt;1 Sec</h3>
-          <p>Lightning Fast Bill Generation</p>
+          <p>Fast Bill Generation</p>
         </div>
         <div class="stat-item">
           <h3 class="stat-counter" data-count="299" data-prefix="₹" data-suffix="/yr">₹299/yr</h3>
-          <p>Affordable Pro Subscription</p>
+          <p>Pro Plan</p>
         </div>
       </div>
     </div>
@@ -264,7 +378,7 @@
         <span class="badge badge-primary">Built for Indian Vyaparis</span>
         <h2 class="section-title" style="margin-top: 12px;">Everything You Need to Run Your Shop</h2>
         <p class="section-subtitle">
-          Say goodbye to bulky desktop computers and costly recurring server charges. InvoiceFine puts an entire commercial ERP into your pocket.
+          Full GST billing, thermal printing &amp; inventory — zero server fees.
         </p>
       </div>
 
@@ -275,7 +389,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
           </div>
           <h3>Smart GST & Non-GST Invoicing</h3>
-          <p>Create professional invoices with accurate CGST/SGST/IGST tax breakdowns, discounts, and automatic round-offs in seconds.</p>
+          <p>GST invoices with CGST/SGST/IGST, discounts &amp; auto round-off.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> A4 Standard & 4x6" label formats</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant WhatsApp PDF sharing</li>
@@ -289,7 +403,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="11" y2="16"></line></svg>
           </div>
           <h3>Bluetooth Thermal Printer Billing</h3>
-          <p>Connect any standard 2-inch or 3-inch ESC/POS thermal printer via Bluetooth for lightning fast counter receipts.</p>
+          <p>Connect 2" or 3" Bluetooth thermal printers for instant counter receipts.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 58mm & 80mm roll support</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast paper-saving compact format</li>
@@ -303,7 +417,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <h3>Customer Ledger & Udhar Khata</h3>
-          <p>Track customer balances, payment histories, and send polite automated payment reminder messages over WhatsApp.</p>
+          <p>Track customer balances &amp; send WhatsApp reminders in 1 tap.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Partial payment & balance tracking</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 1-Click WhatsApp payment reminders</li>
@@ -317,7 +431,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
           </div>
           <h3>Stock & Inventory Management</h3>
-          <p>Automatic stock deduction upon billing, low inventory threshold notifications, and HSN/SAC code catalog management.</p>
+          <p>Auto stock deduction on billing with low-inventory alerts.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Low stock warning badges</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Wholesale & Retail dual pricing</li>
@@ -331,7 +445,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
           </div>
           <h3>Expense & Cashflow Tracker</h3>
-          <p>Categorize business expenses (rent, electricity, staff salary, tea) and maintain exact daily net cash flow calculations.</p>
+          <p>Log daily expenses &amp; track exact net cash flow.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-mode expense logging</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Vendor expense reconciliation</li>
@@ -345,7 +459,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
           </div>
           <h3>P&L & GSTR-1 Tax Reports</h3>
-          <p>One-tap business health checks with accurate recognized profit formulas (Sales − COGS − Expenses) and GSTR summaries.</p>
+          <p>P&amp;L, GSTR-1 summaries &amp; top-item analytics in 1 tap.</p>
           <ul class="feature-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> CA-ready Excel & PDF exports</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Top selling items analytics</li>
@@ -356,59 +470,237 @@
     </div>
   </section>
 
+  <!-- WHO IS INVOICEFINE BUILT FOR? (PRO INDUSTRY SECTION) -->
+  <section class="section reveal-on-scroll" id="industries">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-primary">Tailored for Indian Retail</span>
+        <h2 class="section-title" style="margin-top: 12px;">Built for Every Type of Vyapari</h2>
+        <p class="section-subtitle">
+          From kirana to wholesale — InvoiceFine fits every shop type.
+        </p>
+      </div>
+
+      <div class="industry-grid">
+        <!-- Vertical 1 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">🏪</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Kirana &amp; Grocery Stores</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              Fast barcode billing with decimal weights &amp; instant khata updates.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">⚡ Fast Barcode Billing</span>
+          </div>
+        </div>
+
+        <!-- Vertical 2 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">📱</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Mobile &amp; Electronics Shops</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              IMEI &amp; serial numbers on tax invoices with warranty notes &amp; B2B GST.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">🛡️ IMEI &amp; Warranty Terms</span>
+          </div>
+        </div>
+
+        <!-- Vertical 3 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">👕</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Clothing, Garments &amp; Shoes</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              Size &amp; color variants, festival discounts &amp; neat 3&quot; exchange receipts.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">🏷️ Size &amp; Style Variant Matrix</span>
+          </div>
+        </div>
+
+        <!-- Vertical 4 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">🔧</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Hardware, Paints &amp; Sanitary</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              HSN code library, contractor credit ledger &amp; A4 GST quotations.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">📐 HSN &amp; Contractor Khata</span>
+          </div>
+        </div>
+
+        <!-- Vertical 5 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">☕</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Cafes, Bakeries &amp; Fast Food</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              Fast counter slips, UPI QR on bill &amp; daily cash drawer summary.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">☕ 1-Sec Thermal Counter Slip</span>
+          </div>
+        </div>
+
+        <!-- Vertical 6 -->
+        <div class="industry-card">
+          <div>
+            <div class="industry-icon">📦</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Wholesale &amp; Distribution</h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5;">
+              Wholesale/retail dual pricing &amp; 1-tap WhatsApp statement PDFs.
+            </p>
+          </div>
+          <div>
+            <span class="industry-tag">📊 Wholesale Dual Rates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Comparison Section -->
   <section class="section" style="background: var(--bg-surface-variant);">
     <div class="container">
       <div class="text-center">
         <span class="badge badge-positive">Why InvoiceFine?</span>
-        <h2 class="section-title" style="margin-top: 12px;">How We Compare to Traditional Apps</h2>
-        <p class="section-subtitle">
-          See why Indian retailers choose InvoiceFine over heavy cloud billing applications.
+        <h2 class="section-title" style="margin-top: 12px;">InvoiceFine vs Others</h2>
+        <p class="section-subtitle" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+          See why Indian retailers prefer us over costly cloud billing apps.
         </p>
       </div>
 
-      <div class="comparison-wrapper">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th style="width: 35%;">Feature</th>
-              <th class="highlight" style="width: 35%;">InvoiceFine</th>
-              <th style="width: 30%;">Other Billing Apps (Vyapar / MyBillBook)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Internet Requirement</strong></td>
-              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ 100% Offline-First</span> (Works anywhere)</td>
-              <td>Requires constant internet / cloud sync</td>
-            </tr>
-            <tr>
-              <td><strong>Data Privacy & Security</strong></td>
-              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Stored in phone's SQLite DB</span> (Zero server access)</td>
-              <td>Uploaded to external 3rd-party servers</td>
-            </tr>
-            <tr>
-              <td><strong>Annual Cost</strong></td>
-              <td class="highlight"><span style="color:var(--primary); font-weight:800;">₹299 / Year</span> (Intro offer ₹1)</td>
-              <td>₹2,500 to ₹5,000+ every year</td>
-            </tr>
-            <tr>
-              <td><strong>App Speed & Size</strong></td>
-              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Instant launch</span>, lightweight & ultra-fast</td>
-              <td>Bulky, slow on budget Android devices</td>
-            </tr>
-            <tr>
-              <td><strong>Thermal Bluetooth Printing</strong></td>
-              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Built-in ESC/POS</span> 2" & 3" support</td>
-              <td>Often locked behind costly desktop plans</td>
-            </tr>
-            <tr>
-              <td><strong>Backup Control</strong></td>
-              <td class="highlight"><span style="color:var(--positive); font-weight:700;">✓ Encrypted local & Google Drive</span></td>
-              <td>Locked inside vendor cloud</td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Mobile-friendly comparison cards -->
+      <div class="comparison-cards-grid">
+
+        <div class="cmp-card">
+          <div class="cmp-feature">Internet</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> 100% Offline</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> Needs cloud sync</div>
+        </div>
+
+        <div class="cmp-card">
+          <div class="cmp-feature">Data Privacy</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> On-device SQLite</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> 3rd-party servers</div>
+        </div>
+
+        <div class="cmp-card">
+          <div class="cmp-feature">Annual Cost</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> ₹299/yr (Intro ₹1)</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> ₹2,500–₹5,000+/yr</div>
+        </div>
+
+        <div class="cmp-card">
+          <div class="cmp-feature">App Speed</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> Instant, lightweight</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> Slow on budget phones</div>
+        </div>
+
+        <div class="cmp-card">
+          <div class="cmp-feature">Thermal Printing</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> Built-in 2" &amp; 3"</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> Costly add-on</div>
+        </div>
+
+        <div class="cmp-card">
+          <div class="cmp-feature">Backup Control</div>
+          <div class="cmp-us"><span class="cmp-check">✓</span> Local + Google Drive</div>
+          <div class="cmp-them"><span class="cmp-cross">✗</span> Vendor cloud only</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED MERCHANT TESTIMONIALS & SOCIAL PROOF (PRO SECTION) -->
+  <section class="section reveal-on-scroll" id="reviews">
+    <div class="container">
+      <div class="text-center">
+        <div class="rating-badge-container">
+          <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span style="font-weight: 800; font-size: 0.9rem;">4.9 / 5.0 on Google Play</span>
+          <span class="badge badge-positive" style="font-size: 0.72rem; padding: 2px 8px;">10,000+ Downloads</span>
+        </div>
+        <h2 class="section-title" style="margin-top: 8px;">Trusted by Indian Shopkeepers</h2>
+        <p class="section-subtitle">
+          Trusted by shopkeepers across India.
+        </p>
+      </div>
+
+      <div class="testimonial-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #F59E0B; margin-bottom: 12px; font-size: 1rem; letter-spacing: 2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              &ldquo;I was tired of paying &#8377;4,500 every single year to other apps just to renew billing. InvoiceFine runs 100% on my phone without internet, connects to my 3-inch Bluetooth printer in 1 second, and never hangs during rush hours.&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">RB</div>
+            <div>
+              <div style="font-weight: 800; font-size: 0.95rem;">Ramesh Balaji</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Shree Balaji Traders &bull; Delhi</div>
+              <div class="verified-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Verified Merchant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #F59E0B; margin-bottom: 12px; font-size: 1rem; letter-spacing: 2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              &ldquo;Customer Udhar Khata was my biggest headache. With InvoiceFine, sending polite payment reminders on WhatsApp with exact balance statements takes just 1 tap. I recovered over &#8377;35,000 pending udhar in my first month!&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">SP</div>
+            <div>
+              <div style="font-weight: 800; font-size: 0.95rem;">Suresh Patel</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Patel Kirana &amp; Provisions &bull; Ahmedabad</div>
+              <div class="verified-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Verified Merchant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #F59E0B; margin-bottom: 12px; font-size: 1rem; letter-spacing: 2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">
+              &ldquo;My shop is in a basement where internet is very patchy. Other apps used to freeze or show sync errors. InvoiceFine&rsquo;s 100% offline SQLite database is a lifesaver &mdash; instant search on 3,000 items with zero lag.&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">RV</div>
+            <div>
+              <div style="font-weight: 800; font-size: 0.95rem;">Rajesh Verma</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Verma Electricals &amp; Hardware &bull; Jaipur</div>
+              <div class="verified-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Verified Merchant</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -427,9 +719,9 @@
       </div>
 
       <div class="blog-grid">
-        <div class="blog-card">
+        <div class="blog-card reveal-on-scroll">
           <div class="blog-thumb">
-            <img src="screenshots/02_Feature 1.png" alt="Offline Billing Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/02_feature_1.webp" alt="Offline Billing Guide" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -441,9 +733,9 @@
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card reveal-on-scroll reveal-delay-1">
           <div class="blog-thumb">
-            <img src="screenshots/03_Feature 2.png" alt="Thermal Printer Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/03_feature_2.webp" alt="Thermal Printer Guide" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -455,9 +747,9 @@
           </div>
         </div>
 
-        <div class="blog-card">
+        <div class="blog-card reveal-on-scroll reveal-delay-2">
           <div class="blog-thumb">
-            <img src="screenshots/04_Feature 3.png" alt="Customer Khata Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/04_feature_3.webp" alt="Customer Khata Guide" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -472,12 +764,117 @@
     </div>
   </section>
 
+  <!-- FREQUENTLY ASKED QUESTIONS (PRO INTERACTIVE ACCORDION) -->
+  <section class="section reveal-on-scroll" id="faq" style="background: var(--bg-surface-variant);">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge badge-primary">Got Questions?</span>
+        <h2 class="section-title" style="margin-top: 12px;">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions answered.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button type="button" class="faq-question">
+            <span>Does InvoiceFine really work 100% offline without any internet?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, absolutely! InvoiceFine is engineered with a strict 100% offline-first architecture. All your business records, product inventory, customer khata ledger, and sales invoices are stored directly inside your Android device using an encrypted local SQLite database. You can generate bills, print thermal receipts, and calculate GST even in deep basements or areas with zero internet coverage.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Which Bluetooth thermal printers are compatible with the app?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              InvoiceFine natively supports all standard 2-inch (58mm) and 3-inch (80mm) ESC/POS Bluetooth thermal printers commonly used across Indian retail (such as Everycom, NGX, TVS, Pegasus, Epson, and generic Bluetooth receipt printers). Simply pair the printer in your phone&rsquo;s Bluetooth settings once, and InvoiceFine connects automatically for sub-second receipts.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How do I backup and secure my shop data and customer khata?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              InvoiceFine provides 1-tap automated encrypted database backups. You can save your backup file to your phone&rsquo;s internal memory, an SD card, send it to your WhatsApp/email, or save it directly into your personal Google Drive account. You have 100% ownership of your records &mdash; no third-party cloud lock-in.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Can I send bills and payment reminders directly on WhatsApp?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! You can share professional PDF invoices or formatted text summaries directly via WhatsApp with 1 tap. For Udhar Khata customers, you can send automated, polite payment reminders that include their pending balance statement and your shop&rsquo;s dynamic UPI QR payment link for quick settlements.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How is InvoiceFine different from apps like Vyapar or MyBillBook?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Traditional apps rely on remote cloud servers, forcing you to pay heavy annual fees (&#8377;2,500 to &#8377;5,000+ every year) and suffer delays when internet is down. InvoiceFine charges zero server fees, runs completely offline on budget Android phones, launches in under 1 second, and keeps your commercial data 100% private on your own device.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Are there any hidden monthly server charges or commissions?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Zero hidden fees! The core app is free to use, and our Pro subscription is currently available at a special introductory price of just &#8377;1 for your first year (regular &#8377;299/year). We do not take any transaction cuts, payment commissions, or recurring monthly server charges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Download CTA Section -->
   <section class="section-sm" id="download">
     <div class="container">
       <div class="cta-banner">
         <h2>Download InvoiceFine for Android</h2>
-        <p>Get the official app directly from Google Play. Lightweight, lightning fast, and ready to bill in under 60 seconds.</p>
+        <p>Lightweight, fast &amp; ready to bill in 60 seconds.</p>
         <div class="flex justify-center gap-4" style="flex-wrap: wrap;">
           <a href="https://play.google.com/store/apps/details?id=com.procsctools.invoicefine" target="_blank" class="btn btn-primary btn-lg">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
@@ -491,13 +888,13 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
           <p>
@@ -548,7 +945,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
+        <div>© 2026 InvoiceFine. All rights reserved.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

@@ -7,17 +7,23 @@
   <meta name="description" content="Explore all features of InvoiceFine: GST & non-GST billing, Bluetooth thermal printer support, customer ledger khata, inventory low stock alerts, cashflow expense tracking, and GSTR reports.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/features.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/features.html">
   <meta property="og:title" content="Features — InvoiceFine | Complete Pocket ERP Capabilities">
   <meta property="og:description" content="100% offline-first Android billing app with Bluetooth thermal printing, customer khata, stock management, and GST reports.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -73,7 +79,7 @@
     <div class="container">
       
       <!-- Module 1: Invoicing -->
-      <div class="doc-card" id="invoicing">
+      <div class="doc-card reveal-on-scroll" id="invoicing">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>
@@ -95,7 +101,7 @@
       </div>
 
       <!-- Module 2: Thermal Printing -->
-      <div class="doc-card" id="thermal">
+      <div class="doc-card reveal-on-scroll" id="thermal">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0; background: var(--positive-soft); color: var(--positive);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line></svg>
@@ -116,7 +122,7 @@
       </div>
 
       <!-- Module 3: Customer Ledger & Khata -->
-      <div class="doc-card" id="khata">
+      <div class="doc-card reveal-on-scroll" id="khata">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0; background: var(--warning-soft); color: var(--warning);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
@@ -138,7 +144,7 @@
       </div>
 
       <!-- Module 4: Inventory & Stock -->
-      <div class="doc-card" id="inventory">
+      <div class="doc-card reveal-on-scroll" id="inventory">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
@@ -160,7 +166,7 @@
       </div>
 
       <!-- Module 5: Expenses & Cashflow -->
-      <div class="doc-card" id="expenses">
+      <div class="doc-card reveal-on-scroll" id="expenses">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0; background: var(--info-soft); color: var(--info);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
@@ -181,7 +187,7 @@
       </div>
 
       <!-- Module 6: Reports & Privacy -->
-      <div class="doc-card" id="reports">
+      <div class="doc-card reveal-on-scroll" id="reports">
         <div class="flex items-center gap-4" style="margin-bottom: 20px;">
           <div class="feature-icon-wrapper" style="margin-bottom: 0; background: var(--primary-soft); color: var(--primary);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
@@ -219,16 +225,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -238,12 +246,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -263,7 +271,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -274,7 +282,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

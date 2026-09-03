@@ -7,17 +7,23 @@
   <meta name="description" content="Take an interactive visual tour of InvoiceFine screens: Dashboard, Invoicing, Thermal Printing, Khata, Inventory, and P&L Reports.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/app-tour.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/app-tour.html">
   <meta property="og:title" content="App Tour — Visual Showcase of InvoiceFine Mobile ERP">
   <meta property="og:description" content="Explore InvoiceFine's clean, high-contrast Android billing interface.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -73,7 +79,7 @@
     <div class="container">
       
       <!-- Screen 1: Welcome & Setup -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
           <div>
             <span class="badge badge-primary">Screen 01</span>
@@ -88,16 +94,16 @@
             </ul>
           </div>
           <div style="text-align: center;">
-            <img src="screenshots/01_Welcome.png" alt="InvoiceFine Welcome Screen" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/01_welcome.webp" alt="InvoiceFine Welcome Screen" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
         </div>
       </div>
 
       <!-- Screen 2: Invoicing & Billing -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
           <div style="text-align: center;">
-            <img src="screenshots/02_Feature 1.png" alt="InvoiceFine Invoicing Engine" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/02_feature_1.webp" alt="InvoiceFine Invoicing Engine" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
           <div>
             <span class="badge badge-positive">Screen 02</span>
@@ -115,7 +121,7 @@
       </div>
 
       <!-- Screen 3: Thermal Printing -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
           <div>
             <span class="badge badge-warning">Screen 03</span>
@@ -130,16 +136,16 @@
             </ul>
           </div>
           <div style="text-align: center;">
-            <img src="screenshots/03_Feature 2.png" alt="InvoiceFine Thermal Printing" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/03_feature_2.webp" alt="InvoiceFine Thermal Printing" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
         </div>
       </div>
 
       <!-- Screen 4: Customer Khata -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
           <div style="text-align: center;">
-            <img src="screenshots/04_Feature 3.png" alt="InvoiceFine Customer Khata" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/04_feature_3.webp" alt="InvoiceFine Customer Khata" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
           <div>
             <span class="badge badge-primary">Screen 04</span>
@@ -157,7 +163,7 @@
       </div>
 
       <!-- Screen 5: Inventory -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
           <div>
             <span class="badge badge-positive">Screen 05</span>
@@ -172,16 +178,16 @@
             </ul>
           </div>
           <div style="text-align: center;">
-            <img src="screenshots/05_Feature 4.png" alt="InvoiceFine Stock Inventory" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/05_feature_4.webp" alt="InvoiceFine Stock Inventory" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
         </div>
       </div>
 
       <!-- Screen 6: Expenses & Reports -->
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <div class="grid" style="grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
           <div style="text-align: center;">
-            <img src="screenshots/07_Feature 6.png" alt="InvoiceFine P&L and GST Reports" class="lightbox-trigger" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
+            <img src="screenshots/07_feature_6.webp" alt="InvoiceFine P&L and GST Reports" class="lightbox-trigger" loading="lazy" decoding="async" style="max-height: 480px; border-radius: 24px; border: 4px solid #1E1E24; box-shadow: var(--shadow-lg); cursor: pointer;" title="Click to view full size">
           </div>
           <div>
             <span class="badge badge-primary">Screen 06</span>
@@ -215,16 +221,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -234,12 +242,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -259,7 +267,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -270,7 +278,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

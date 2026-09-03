@@ -7,17 +7,23 @@
   <meta name="description" content="Privacy Policy for InvoiceFine: How we guarantee 100% offline local storage with zero cloud telemetry or tracking.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/privacy.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/privacy.html">
   <meta property="og:title" content="Privacy Policy — InvoiceFine">
   <meta property="og:description" content="100% offline-first local SQLite data guarantee.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -50,6 +56,9 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c0-.36.21-.72.609-.954zm11.233 11.234l2.586 2.586-12.015 6.944 9.429-9.53zm0-2.096L5.413 1.422l12.015 6.944-2.586 2.586zm1.472 1.472l3.414-1.972a1.5 1.5 0 0 0 0-2.596l-3.414-1.972-2.146 2.146 2.146 2.394z"/></svg>
           <span>Get App</span>
         </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -63,7 +72,7 @@
         <p style="color: var(--text-secondary);">Last updated: August 2026</p>
       </div>
 
-      <div class="doc-card">
+      <div class="doc-card reveal-on-scroll">
         <h2>1. Overview & 100% Offline Architecture</h2>
         <p>
           InvoiceFine is engineered strictly as an <strong>offline-first application</strong> for Indian small businesses, shopkeepers, and traders. Your business information—including customer names, phone numbers, invoice records, sales totals, item catalogs, and GST numbers—is stored exclusively inside a local SQLite database on your device.
@@ -108,16 +117,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -127,11 +138,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -146,11 +158,12 @@
             <li><a href="guide.html">GST Setup Guide</a></li>
             <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
             <li><a href="guide.html#backup">Backup & Restore</a></li>
+            <li><a href="contact.html">Developer Support</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -161,7 +174,8 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
+        <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>
   </footer>

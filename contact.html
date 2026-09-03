@@ -7,17 +7,23 @@
   <meta name="description" content="Get help with InvoiceFine app, submit feature requests, or inquire about business licensing. Reach out to our dedicated support team.">
   <link rel="canonical" href="https://invoicefine.procsctools.in/contact.html">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/contact.html">
   <meta property="og:title" content="Contact Support — InvoiceFine">
   <meta property="og:description" content="Reach out to InvoiceFine engineering and business support.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,7 +32,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -75,7 +81,7 @@
         
         <!-- Contact Information -->
         <div>
-          <div class="doc-card">
+          <div class="doc-card reveal-on-scroll">
             <h3>Direct Developer Support</h3>
             <p style="margin-top: 8px;">
               InvoiceFine is actively maintained by our engineering and business support team in India.
@@ -116,41 +122,54 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="doc-card">
+        <div class="doc-card reveal-on-scroll">
           <h3>Send Us a Message</h3>
           <p style="margin-top: 6px; font-size: 0.9rem;">
             Submit your feedback, printer model queries, or feature requests.
           </p>
 
-          <form style="margin-top: 20px;" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will reply to your email shortly.');">
+          <!-- Submissions are delivered via FormSubmit to the support inbox.
+               SETUP (one time): submit this form once and click the activation
+               link FormSubmit emails you. After that, all messages arrive in the inbox.
+               To swap providers, change the form's action to your Formspree/Web3Forms URL. -->
+          <form id="contactForm" method="POST" action="https://formsubmit.co/jitendraeditiz@gmail.com" style="margin-top: 20px;">
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New InvoiceFine support message">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Honeypot spam trap (hidden from humans) -->
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;" aria-hidden="true">
+
             <div class="form-group">
               <label class="form-label" for="contactName">Your Name</label>
-              <input type="text" id="contactName" class="form-control" placeholder="e.g. Ramesh Patel" required>
+              <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Ramesh Patel" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="contactEmail">Email Address</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="you@business.com" required>
+              <input type="email" id="contactEmail" name="email" class="form-control" placeholder="you@business.com" required>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="contactType">Query Type</label>
-              <select id="contactType" class="form-control">
-                <option value="support">Technical Support / Printer Pairing</option>
-                <option value="billing">Subscription & Billing Query</option>
-                <option value="feature">Feature Request</option>
-                <option value="business">Bulk / Custom Business Inquiries</option>
+              <select id="contactType" name="query_type" class="form-control">
+                <option value="Technical Support / Printer Pairing">Technical Support / Printer Pairing</option>
+                <option value="Subscription & Billing Query">Subscription & Billing Query</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Bulk / Custom Business Inquiry">Bulk / Custom Business Inquiries</option>
               </select>
             </div>
 
             <div class="form-group">
               <label class="form-label" for="contactMsg">Message / Details</label>
-              <textarea id="contactMsg" class="form-control" rows="4" placeholder="How can we help your business?" required></textarea>
+              <textarea id="contactMsg" name="message" class="form-control" rows="4" placeholder="How can we help your business?" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%;">
               <span>Send Message</span>
             </button>
+
+            <p id="contactFormStatus" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -158,16 +177,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -177,12 +198,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Guides</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -202,7 +223,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -213,7 +234,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>

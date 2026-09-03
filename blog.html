@@ -8,18 +8,24 @@
   <link rel="canonical" href="https://invoicefine.procsctools.in/blog.html">
 
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="Web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Web/favicon-16x16.png">
-  <link rel="shortcut icon" href="Web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="Web/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="web/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="web/favicon-16x16.png">
+  <link rel="shortcut icon" href="web/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="web/apple-touch-icon.png">
+  <link rel="manifest" href="web/manifest.json">
+  <meta name="theme-color" content="#D93632">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://invoicefine.procsctools.in/blog.html">
   <meta property="og:title" content="InvoiceFine Blog — Guides for Indian Small Businesses">
   <meta property="og:description" content="GST billing, Bluetooth thermal printing, and udhar ledger management guides.">
-  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.png">
+  <meta property="og:image" content="https://invoicefine.procsctools.in/cover.webp">
 
+    <!-- Preload & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +34,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo">
-        <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+        <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
         <span>InvoiceFine</span>
         <span class="brand-badge">Pocket ERP</span>
       </a>
@@ -78,7 +84,7 @@
         <!-- Blog 1 -->
         <div class="blog-card">
           <div class="blog-thumb">
-            <img src="screenshots/02_Feature 1.png" alt="Offline Billing vs Cloud" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/02_feature_1.webp" alt="Offline Billing vs Cloud" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -98,7 +104,7 @@
         <!-- Blog 2 -->
         <div class="blog-card">
           <div class="blog-thumb">
-            <img src="screenshots/03_Feature 2.png" alt="Thermal Printer Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/03_feature_2.webp" alt="Thermal Printer Guide" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -118,7 +124,7 @@
         <!-- Blog 3 -->
         <div class="blog-card">
           <div class="blog-thumb">
-            <img src="screenshots/04_Feature 3.png" alt="Udhar Khata Management" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="screenshots/04_feature_3.webp" alt="Udhar Khata Management" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="blog-content">
             <div class="blog-meta">
@@ -153,16 +159,18 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <img src="Web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
+            <img src="web/android-chrome-192x192.png" alt="InvoiceFine Logo" class="brand-logo-img">
             <span>InvoiceFine</span>
           </a>
-          <p>Pocket ERP for Indian Small Business. 100% offline-first GST billing, khata ledger, and inventory manager.</p>
+          <p>
+            Pocket ERP for Indian Small Business. 100% offline-first GST billing, customer khata ledger, and inventory manager.
+          </p>
         </div>
 
         <div class="footer-col">
@@ -172,12 +180,12 @@
             <li><a href="features.html">All Features</a></li>
             <li><a href="invoice-maker.html">Free Invoice Tool</a></li>
             <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="app-tour.html">App Tour</a></li>
+            <li><a href="app-tour.html">Interactive App Tour</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Blog & Resources</h4>
+          <h4>Blog & Insights</h4>
           <ul class="footer-links">
             <li><a href="blog.html">Blog Archive</a></li>
             <li><a href="blog-offline-vs-cloud-billing.html">Offline vs Cloud Billing</a></li>
@@ -187,17 +195,17 @@
         </div>
 
         <div class="footer-col">
-          <h4>Guides & Help</h4>
+          <h4>Resources</h4>
           <ul class="footer-links">
             <li><a href="guide.html">GST Setup Guide</a></li>
-            <li><a href="guide.html#thermal">Thermal Pairing</a></li>
+            <li><a href="guide.html#thermal">Thermal Printer Pairing</a></li>
             <li><a href="guide.html#backup">Backup & Restore</a></li>
             <li><a href="contact.html">Developer Support</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Legal & Privacy</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
@@ -208,7 +216,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved.</div>
+        <div>© 2026 InvoiceFine (https://invoicefine.procsctools.in). All rights reserved. Built for Indian Retailers.</div>
         <div>Support: <a href="mailto:jitendraeditiz@gmail.com" style="color:var(--primary);">jitendraeditiz@gmail.com</a></div>
       </div>
     </div>
