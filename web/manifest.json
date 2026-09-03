@@ -1,19 +1,34 @@
 {
-  "name": "icon",
-  "short_name": "icon",
+  "name": "InvoiceFine — Pocket ERP for Indian Small Business",
+  "short_name": "InvoiceFine",
+  "description": "100% offline-first GST billing, Bluetooth thermal printing, customer khata ledger, and inventory manager for Indian small businesses.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F7F8",
+  "theme_color": "#D93632",
+  "categories": ["business", "finance", "productivity"],
+  "lang": "en-IN",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
