@@ -3,9 +3,6 @@
    Identity: Pocket ERP for Indian Small Business
    Theme: Coral Primary (#D93632), Pure Dark (#0B0B0D), Crisp Light (#F7F7F8)
    ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
-
 /* CSS Variables for Light & Dark Modes */
 :root {
   /* Light Theme */
@@ -159,7 +156,7 @@ button, input, select, textarea {
 }
 
 .section {
-  padding: 96px 0;
+  padding: 80px 0;
   position: relative;
 }
 
@@ -189,7 +186,7 @@ button, input, select, textarea {
 
 /* Typography */
 .display-title {
-  font-size: clamp(2.4rem, 5.2vw, 4.25rem);
+  font-size: clamp(2.2rem, 5.2vw, 4.25rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.035em;
@@ -197,18 +194,18 @@ button, input, select, textarea {
 }
 
 .section-title {
-  font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+  font-size: clamp(1.55rem, 3.6vw, 2.6rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
 }
 
 .section-subtitle {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto 48px auto;
-  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+  line-height: 1.65;
 }
 
 .gradient-text {
@@ -359,12 +356,14 @@ button, input, select, textarea {
   font-weight: 800;
   font-size: 1.45rem;
   color: var(--text-primary);
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
   width: 36px;
   height: 36px;
   border-radius: 9px;
+  flex-shrink: 0;
 }
 
 .brand-badge {
@@ -376,21 +375,35 @@ button, input, select, textarea {
   border-radius: var(--radius-sm);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 20px;
   list-style: none;
 }
 
+@media (max-width: 1180px) and (min-width: 769px) {
+  .nav-links {
+    gap: 14px;
+  }
+  .nav-link {
+    font-size: 0.88rem;
+  }
+  .brand-badge {
+    display: none;
+  }
+}
+
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 500;
   color: var(--text-secondary);
   position: relative;
   padding: 8px 0;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -1086,6 +1099,115 @@ button, input, select, textarea {
   box-shadow: 0 0 0 3px var(--primary-soft);
 }
 
+/* Contact form status message (hidden until JS reveals it) */
+.form-status {
+  display: none;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.form-status.is-visible {
+  display: block;
+}
+
+.form-status-info {
+  background: var(--info-soft);
+}
+
+.form-status-success {
+  background: var(--positive-soft);
+}
+
+.form-status-error {
+  background: var(--danger-soft);
+}
+
+/* Doubled class beats `.doc-card p` specificity so status text keeps its color */
+.form-status.form-status-info {
+  color: var(--info);
+}
+
+.form-status.form-status-success {
+  color: var(--positive);
+}
+
+.form-status.form-status-error {
+  color: var(--danger);
+}
+
+/* ==========================================================================
+   PRO UI ELEVATION & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Scroll-Triggered Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Interactive Hover Lift & Glow */
+.feature-card, .pricing-card, .blog-card, .guide-card, .lightbox-trigger {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+}
+
+.feature-card:hover, .pricing-card:hover, .blog-card:hover, .guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(217, 54, 50, 0.35);
+}
+
+/* Glassmorphism Surface Utility */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glass);
+}
+
+/* Pulse Badge Animation */
+.badge-pulse {
+  position: relative;
+}
+
+.badge-pulse::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--positive);
+  animation: badge-pulse-anim 2s infinite;
+}
+
+@keyframes badge-pulse-anim {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 217, 154, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(74, 217, 154, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 217, 154, 0); }
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
   .hero-grid {
@@ -1148,5 +1270,466 @@ button, input, select, textarea {
 
   .slide-card {
     flex: 0 0 240px;
+  }
+
+  .floating-badge-top-left {
+    top: 6px;
+    left: 6px;
+  }
+
+  .floating-badge-bottom-right {
+    bottom: 6px;
+    right: 6px;
+  }
+
+  .floating-badge-bottom-left {
+    display: none;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .display-title {
+    font-size: clamp(1.85rem, 7vw, 2.6rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.35rem, 5vw, 1.85rem);
+  }
+
+  .step-card {
+    padding: 22px 18px;
+  }
+
+  .industry-card {
+    padding: 20px 18px;
+  }
+
+  .cta-banner {
+    padding: 40px 24px;
+  }
+
+  .hero {
+    padding-top: calc(var(--nav-height) + 24px);
+    padding-bottom: 48px;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.82rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   PRO HOME PAGE COMPONENTS: FLOATING BADGES, INDUSTRIES, STEPS, REVIEWS & FAQ
+   ========================================================================== */
+
+/* 1. Floating Hero Badges */
+.hero-preview-wrapper {
+  position: relative;
+}
+
+.floating-hero-badge {
+  position: absolute;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10;
+  animation: floatBadge 3.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.floating-badge-top-left {
+  top: -12px;
+  left: -14px;
+  animation-delay: 0s;
+}
+
+.floating-badge-bottom-right {
+  bottom: -14px;
+  right: -10px;
+  animation-delay: 1.8s;
+}
+
+.floating-badge-bottom-left {
+  bottom: 28px;
+  left: -20px;
+  animation-delay: 0.9s;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* 2. Industries & Verticals Grid */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.industry-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 28px rgba(217, 54, 50, 0.12);
+}
+
+.industry-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.industry-tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* 3. 3-Step "How It Works" Flow */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 32px 26px;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(217, 54, 50, 0.35);
+}
+
+/* 4. Merchant Reviews & Testimonials */
+.rating-badge-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-surface-variant);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 6px 18px;
+  margin-bottom: 16px;
+}
+
+.rating-stars {
+  color: #F59E0B;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: var(--positive);
+  font-weight: 700;
+}
+
+/* 5. Interactive FAQ Accordion */
+.faq-accordion {
+  max-width: 840px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-item.active {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 18px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.faq-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 20px;
+}
+
+/* ==========================================================================
+   MOBILE-FRIENDLY COMPARISON CARDS GRID
+   ========================================================================== */
+.comparison-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.cmp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.cmp-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.cmp-feature {
+  background: var(--bg-surface-variant);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cmp-us {
+  padding: 12px 14px;
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--positive);
+  background: var(--positive-soft);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.cmp-them {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.cmp-check {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--positive);
+  flex-shrink: 0;
+}
+
+.cmp-cross {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--danger);
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .comparison-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .comparison-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
