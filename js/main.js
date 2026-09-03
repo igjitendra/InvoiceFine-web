@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileNav();
   initFaqAccordion();
-  initAppSimulatorTabs();
   initRoiCalculator();
   initStatCounters();
   initScreenshotAutoSlider();
   initLightbox();
+  initContactForm();
+  initScrollReveal();
 });
 
 /* --------------------------------------------------------------------------
@@ -237,161 +238,22 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   6. App Simulator Tabs Switcher
+   6. Scroll-Triggered Reveal Animation (Pro UI)
    -------------------------------------------------------------------------- */
-function initAppSimulatorTabs() {
-  const tabButtons = document.querySelectorAll('.tab-btn-interactive');
-  const screenTitle = document.getElementById('simScreenTitle');
-  const screenContent = document.getElementById('simScreenContent');
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealElements.length) return;
 
-  if (!tabButtons.length || !screenTitle || !screenContent) return;
-
-  const screens = {
-    dashboard: {
-      title: "Dashboard",
-      html: `
-        <div class="sim-stat-row">
-          <div class="sim-stat">
-            <span style="font-size:0.7rem; color:var(--text-muted);">Today Sales</span>
-            <div class="sim-stat-num" style="color:var(--positive);">₹28,450</div>
-          </div>
-          <div class="sim-stat">
-            <span style="font-size:0.7rem; color:var(--text-muted);">Total Udhar</span>
-            <div class="sim-stat-num" style="color:var(--danger);">₹14,200</div>
-          </div>
-        </div>
-        <div class="sim-card">
-          <div style="font-size:0.75rem; font-weight:700; margin-bottom:8px;">Recent Invoices</div>
-          <div class="flex flex-col gap-2">
-            <div class="sim-bill-item">
-              <div>
-                <strong>INV-00128</strong><br>
-                <span style="color:var(--text-muted);">Sharma Enterprises</span>
-              </div>
-              <strong style="color:var(--primary);">₹4,200</strong>
-            </div>
-            <div class="sim-bill-item">
-              <div>
-                <strong>INV-00127</strong><br>
-                <span style="color:var(--text-muted);">Rajesh Kirana</span>
-              </div>
-              <strong style="color:var(--positive);">₹1,850</strong>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-primary btn-sm" style="width:100%;">+ New Invoice (1-Tap)</button>
-      `
-    },
-    invoices: {
-      title: "Invoices & Billing",
-      html: `
-        <div class="sim-card">
-          <div class="flex justify-between items-center" style="margin-bottom:8px;">
-            <span class="badge badge-positive">Paid</span>
-            <span style="font-size:0.7rem; color:var(--text-muted);">Today 04:15 PM</span>
-          </div>
-          <div style="font-size:0.9rem; font-weight:700;">INV-00129 • ₹12,400</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:8px;">Customer: Verma Trading Co.</div>
-          <div class="flex gap-2">
-            <button class="btn btn-secondary btn-sm" style="flex:1; font-size:0.7rem; padding:4px 8px;">PDF A4</button>
-            <button class="btn btn-primary btn-sm" style="flex:1; font-size:0.7rem; padding:4px 8px;">Thermal 3"</button>
-          </div>
-        </div>
-        <div class="sim-card">
-          <div class="flex justify-between items-center" style="margin-bottom:8px;">
-            <span class="badge badge-warning">Unpaid (Udhar)</span>
-            <span style="font-size:0.7rem; color:var(--text-muted);">Yesterday</span>
-          </div>
-          <div style="font-size:0.9rem; font-weight:700;">INV-00128 • ₹6,750</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:8px;">Customer: Gupta Electronics</div>
-          <button class="btn btn-positive btn-sm" style="width:100%; font-size:0.7rem; padding:4px 8px;">Send WhatsApp Reminder</button>
-        </div>
-      `
-    },
-    customers: {
-      title: "Customer Khata",
-      html: `
-        <div class="sim-card">
-          <div class="flex justify-between items-center">
-            <strong>Mahesh Agencies</strong>
-            <span class="badge badge-warning" style="font-size:0.7rem;">Udhar</span>
-          </div>
-          <div style="font-size:1.1rem; font-weight:800; color:var(--danger); margin:4px 0;">₹8,400 Due</div>
-          <div style="font-size:0.7rem; color:var(--text-muted);">Last payment: 5 days ago</div>
-        </div>
-        <div class="sim-card">
-          <div class="flex justify-between items-center">
-            <strong>Anil Kumar & Sons</strong>
-            <span class="badge badge-positive" style="font-size:0.7rem;">Clear</span>
-          </div>
-          <div style="font-size:1.1rem; font-weight:800; color:var(--positive); margin:4px 0;">₹0 Due</div>
-          <div style="font-size:0.7rem; color:var(--text-muted);">18 Invoices cleared</div>
-        </div>
-      `
-    },
-    inventory: {
-      title: "Stock & Inventory",
-      html: `
-        <div class="sim-card">
-          <div class="flex justify-between items-center">
-            <strong>Basmati Rice 5kg</strong>
-            <span class="badge badge-positive" style="font-size:0.7rem;">In Stock</span>
-          </div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin:4px 0;">SKU: RIC-05 • HSN: 1006</div>
-          <div class="flex justify-between items-center">
-            <span style="font-weight:700;">Qty: 45 Bags</span>
-            <span style="font-weight:700; color:var(--primary);">₹420/bag</span>
-          </div>
-        </div>
-        <div class="sim-card" style="border-color:var(--danger);">
-          <div class="flex justify-between items-center">
-            <strong>Refined Oil 1L</strong>
-            <span class="badge badge-warning" style="font-size:0.7rem; background:var(--danger-soft); color:var(--danger);">Low Stock!</span>
-          </div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin:4px 0;">SKU: OIL-01 • HSN: 1512</div>
-          <div class="flex justify-between items-center">
-            <span style="font-weight:700; color:var(--danger);">Only 2 left (Min: 10)</span>
-            <span style="font-weight:700; color:var(--primary);">₹135/pack</span>
-          </div>
-        </div>
-      `
-    },
-    reports: {
-      title: "P&L & GST Reports",
-      html: `
-        <div class="sim-card">
-          <div style="font-size:0.75rem; color:var(--text-muted);">This Month Profit & Loss</div>
-          <div style="font-size:1.3rem; font-weight:800; color:var(--positive); margin:4px 0;">+ ₹64,820</div>
-          <div style="font-size:0.7rem; color:var(--text-muted);">Sales: ₹2,10,000 | Exp: ₹34,000</div>
-        </div>
-        <div class="sim-card">
-          <div style="font-size:0.75rem; font-weight:700; margin-bottom:6px;">GSTR-1 Tax Summary</div>
-          <div class="flex justify-between" style="font-size:0.75rem; margin-bottom:4px;">
-            <span>CGST (9%):</span>
-            <strong>₹9,450</strong>
-          </div>
-          <div class="flex justify-between" style="font-size:0.75rem; margin-bottom:8px;">
-            <span>SGST (9%):</span>
-            <strong>₹9,450</strong>
-          </div>
-          <button class="btn btn-secondary btn-sm" style="width:100%; font-size:0.7rem; padding:4px 8px;">Export Excel / PDF</button>
-        </div>
-      `
-    }
-  };
-
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const target = btn.getAttribute('data-target');
-      if (screens[target]) {
-        screenTitle.innerText = screens[target].title;
-        screenContent.innerHTML = screens[target].html;
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
       }
     });
-  });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(el => observer.observe(el));
 }
 
 /* --------------------------------------------------------------------------
@@ -460,4 +322,70 @@ function initStatCounters() {
   }, { threshold: 0.5 });
 
   stats.forEach(stat => observer.observe(stat));
+}
+
+/* --------------------------------------------------------------------------
+   9. Contact Form (progressive enhancement over FormSubmit)
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const btn = document.getElementById('contactSubmitBtn');
+  const status = document.getElementById('contactFormStatus');
+  const honey = form.querySelector('[name="_honey"]');
+  const originalBtnHtml = btn ? btn.innerHTML : '';
+  const supportEmail = 'jitendraeditiz@gmail.com';
+
+  function setStatus(message, type) {
+    if (!status) return;
+    status.textContent = message;
+    status.className = 'form-status is-visible form-status-' + type;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Silent drop if the honeypot was filled (bot).
+    if (honey && honey.value.trim() !== '') return;
+
+    // Native constraint validation (required, email format).
+    if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = '<span>Sending…</span>';
+    }
+    setStatus('Sending your message…', 'info');
+
+    // Post to the AJAX variant of whatever endpoint the form action points to.
+    const endpoint = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      const data = await res.json().catch(() => ({}));
+      const ok = res.ok && (data.success === true || data.success === 'true');
+
+      if (ok) {
+        form.reset();
+        setStatus('✓ Thank you! Your message has been sent. We reply within 24 hours (Mon–Sat).', 'success');
+      } else {
+        throw new Error(data.message || 'Request failed');
+      }
+    } catch (err) {
+      setStatus('Could not send right now. Please email us directly at ' + supportEmail + '.', 'error');
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnHtml;
+      }
+    }
+  });
 }
