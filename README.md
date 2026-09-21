@@ -56,25 +56,6 @@ Visitors can download the InvoiceFine mobile app directly from:
 
 ---
 
-## 💻 Local Preview
-
-To test or inspect the website locally:
-
-```bash
-# Clone repository
-git clone https://github.com/igjitendra/InvoiceFine-web.git
-cd InvoiceFine-web
-
-# Serve locally using any static HTTP server (e.g. Python or npx serve)
-python3 -m http.server 8080
-# Or:
-# npx serve .
-```
-
-Open [http://localhost:8080](http://localhost:8080) in your browser.
-
----
-
 ## 🏷️ Keywords & Metadata
 
 `invoicefine website` • `offline gst billing app download` • `esc/pos thermal printer directory` • `direct apk download` • `indian billing software` • `free gst invoice maker`
