@@ -74,45 +74,62 @@
       <div class="text-center" style="margin-bottom: 40px;">
         <span class="badge badge-positive">Data Security Promise</span>
         <h1 class="section-title" style="margin-top: 12px;">Privacy Policy</h1>
-        <p style="color: var(--text-secondary);">Last updated: August 2026</p>
+        <p style="color: var(--text-secondary);">Last updated: October 2026 (Version 2.6.1)</p>
       </div>
 
       <div class="doc-card reveal-on-scroll">
-        <h2>1. Overview & 100% Offline Architecture</h2>
+        <h2>1. Overview & Offline-First Architecture</h2>
         <p>
-          InvoiceFine is engineered strictly as an <strong>offline-first application</strong> for Indian small businesses, shopkeepers, and traders. Your business information—including customer names, phone numbers, invoice records, sales totals, item catalogs, and GST numbers—is stored exclusively inside a local SQLite database on your device.
+          InvoiceFine is engineered strictly as an <strong>offline-first application</strong> for Indian small businesses, retail shops, and service providers. Your core commercial records—including customer khata ledgers, invoices, sales totals, item catalogs, HSN/SAC codes, and GST numbers—are stored locally inside a private SQLite database on your device.
         </p>
         <p>
-          We do not operate remote backend business servers, databases, or analytics engines that collect or synchronize your commercial transactional data.
+          We do not operate remote proprietary servers that harvest, synchronize, or monetize your day-to-day transactional business records.
         </p>
 
-        <h2>2. Information We Do NOT Collect</h2>
+        <h2>2. Google Drive Cloud Backup & Google User Data (Optional)</h2>
         <p>
-          Unlike conventional cloud billing software, InvoiceFine does NOT access, upload, sell, rent, or profile:
+          InvoiceFine offers an optional, user-initiated <strong>Google Drive Cloud Backup & Restore</strong> feature (InvoiceFine Pro) to protect your business records against device damage or loss:
         </p>
         <ul>
-          <li>Your customer address book or phone contacts.</li>
-          <li>Your invoice items, pricing, profit margins, or daily turnover figures.</li>
-          <li>Your tax filing or GSTIN data.</li>
-          <li>Your shop digital signature or private company receipts.</li>
+          <li><strong>Authentication & Scopes:</strong> When you connect your Google Account, we use official Google OAuth 2.0 authentication to request access exclusively to the restricted application data folder (<code>https://www.googleapis.com/auth/drive.appdata</code>).</li>
+          <li><strong>User Data Retrieved:</strong> We retrieve your basic Google profile information (Name, Email Address, and Avatar URL) solely to display your active connected Google Drive account status within the app settings. This information is saved locally on your device and is never sent to any third-party server.</li>
+          <li><strong>Storage Location:</strong> Backup archives are uploaded directly from your phone into your personal Google Drive account's private <code>appDataFolder</code>. No third party or InvoiceFine developer can access, read, or download your Google Drive backup files.</li>
+          <li><strong>Disconnection & Deletion:</strong> You can disconnect Google Drive at any time from <strong>Settings &gt; Backup &amp; Restore</strong> with a single tap. You can delete backups at any time directly through Google Drive or by contacting us.</li>
         </ul>
 
-        <h2>3. Device Permissions & Usage</h2>
-        <p>InvoiceFine requests only essential local hardware permissions:</p>
-        <ul>
-          <li><strong>Bluetooth / Nearby Devices:</strong> Required solely to discover and pair with your ESC/POS thermal receipt printers.</li>
-          <li><strong>Storage / Media:</strong> Required to save exported A4 PDF bills, Excel spreadsheets, and encrypted local backup archives to your device storage.</li>
-          <li><strong>Camera / Photos:</strong> Optional, used only if you choose to attach a business logo to your custom invoices.</li>
-        </ul>
-
-        <h2>4. Subscriptions & Payments</h2>
+        <h2>3. Information We Do NOT Collect</h2>
         <p>
-          All Pro subscription purchases are handled directly and securely through <strong>Google Play Billing</strong>. We never see or store your credit card numbers, debit card details, UPI PINs, or bank account credentials.
+          InvoiceFine does NOT access, sell, rent, track, or share:
+        </p>
+        <ul>
+          <li>Your personal contact list or phone address book.</li>
+          <li>Your item inventory pricing, purchase costs, or profit margins.</li>
+          <li>Your bank accounts, UPI PINs, or private financial credentials.</li>
+          <li>Your hand-drawn digital signatures (these are saved exclusively in your local phone storage).</li>
+        </ul>
+
+        <h2>4. Device Permissions & Usage</h2>
+        <p>InvoiceFine requests only essential permissions necessary to provide retail features:</p>
+        <ul>
+          <li><strong>Camera:</strong> Used strictly to scan barcodes and QR codes for quick POS billing, and optionally to capture business logos. Camera frames are processed on-device and never recorded or transmitted.</li>
+          <li><strong>Storage / Media:</strong> Required to export PDF invoices, Excel spreadsheets, and local <code>.ifbackup</code> files to your internal downloads.</li>
+          <li><strong>Bluetooth / Nearby Devices:</strong> Used solely to discover and pair with ESC/POS thermal receipt printers (58mm / 80mm).</li>
+          <li><strong>Notifications:</strong> Optional local alerts for business khata payment reminders and daily auto-backup status.</li>
+        </ul>
+
+        <h2>5. In-App Subscriptions & Payments</h2>
+        <p>
+          Pro subscription purchases are handled securely through <strong>Google Play Billing</strong> via the RevenueCat SDK. We do not process, store, or receive payment card numbers or banking data. Transaction verification uses anonymous app-specific identifiers provided by Google Play.
         </p>
 
-        <h2>5. Contact Us</h2>
+        <h2>6. Security & Data Retention</h2>
         <p>
-          For questions regarding privacy, offline data handling, or security, please contact us at:
+          Since your database resides on your local device, you maintain full control over your business data. Uninstalling the application will permanently erase local data unless you have created an offline file backup or enabled Google Drive Cloud Backup.
+        </p>
+
+        <h2>7. Contact Us</h2>
+        <p>
+          For questions regarding privacy, Google Drive integration, or data handling, please contact our developer team at:
           <br>
           <strong>Email:</strong> <a href="mailto:jitendraeditiz@gmail.com" style="color: var(--primary);">jitendraeditiz@gmail.com</a>
           <br>
